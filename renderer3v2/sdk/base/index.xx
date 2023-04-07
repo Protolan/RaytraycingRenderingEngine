@@ -1,0 +1,177 @@
+/// @file
+///
+/// @brief Base component - ??? page.
+///
+/// @author Eed - Eugene Denisov, '04.11.16.
+///
+/// Copyright &copy; INTEGRA, Inc., 2004.
+
+//////////////////////////////////////////////////////////////////////////////
+/**
+@page base_design Design Assumptions and Intentions
+
+- PRODUCT_LINE: FLY(SPECTER)
+- PRODUCTS: FS
+- TASKS: KLAS
+- DD: Eed
+- VV:
+- SS:
+
+@section base_envi_design Envi class
+
+Only basic environment access functionality (set and get environment variable)
+is provided. Extended environment processing like old IEVL's field parsing
+and file-based configuration are not included.
+
+@section base_plugin_design Plugins
+
+Because InitFrameWork(), TermFrameWork() and LoadPlugin()
+must be available to application from the very beginning of its work,
+BASE component (DLL) must be loaded together with application,
+via BASE import library (base.lib). BASE plugin (base.dll) must be
+in current directory or in the PATH, otherwise application won't start.
+
+Functions InitClasses() and TermClasses() in each plugin are called once
+during life cycle of plugin (period between its loading and unloading).
+List of loaded plugins is maintained internally. TermFrameWork() calls
+TermClasses() for each plugin in reverse (relative to
+completions of InitClasses() calls) order.
+**/
+
+/**
+@page base_works How It Works
+
+@section base_envi_works Envi class
+
+Windows implementation is based on Window API calls
+SetEnvironmentVariable() and GetEnvironmentVariable().
+
+@section base_plugin_works Plugins
+
+Plugins are organized in 3 lists. As a plugin identifier, DLL handle
+(assigned by operating system loader during DLL loading) is used everywhere.
+ - #loaded_plugins contains IDs of plugins
+ explicitly loaded by LoadPlugin() and number of loads. Latter is necessary
+ for correct unloading, to keep balance between calls of Win32's
+ LoadLibrary() and FreeLibrary().
+ - #inited_plugins contains IDs of plugins which were
+ successfully initialized by InitClasses().
+ - #plugins_to_init contains IDs of plugins which were
+ already loaded and attached to process, but were not initialized yet. 
+
+LoadPlugin() first checks DLL for existence - it is searched first in
+@b bin/bind folders of application root folder, then in @b bin/bind folders
+of INTEGRA folder. If found, plugin is loaded (it is
+necessary to obtain DLL ID). After this check is performed, if requested
+plugin was not loaded already.
+If plugin was found in any of 3 lists, this means DLL either was
+already loaded explicitly (by LoadPlugin()) or implicitly (by
+operating system loader, because some other plugin depends on this one).
+LoadPlugin() in this case increments counter for this DLL and returns SUCCESS.
+
+Upon DLL loading operating system loader calls DllMain() function in this DLL.
+This function, common for all INTEGRA plugins, is provided by @b plugin.obj
+which must be linked with each INTEGRA plugin. DllMain() calls
+global function PluginLoading() in BASE component, which just adds
+name of loaded DLL to #plugins_to_init list. It is guaranteed
+(by operating system loader) that this operation in each DLL is performed
+only once for a period during which this DLL remains loaded.
+
+operating system loader may also load other plugins, which are
+implicitly referenced in loaded plugin. All of them are also
+add themselves to #plugins_to_init list (via call to PluginLoading()).
+
+After completion of loading process, all loaded plugins, except
+very first one (passed as argument of LoadPlugin()), are initialized
+by calls of their InitClasses() exported functions. InitClasses()
+in its turn may call LoadPlugin() function - in this case loading
+and initialization of necessary plugins will be performed before
+exit from InitClasses().
+
+When all loaded plugins (except first) are initilized already,
+first one is initialized. Successfull initialization of each
+plugin causes its ID to be removed from #plugins_to_init and
+to be added to #inited_plugins.
+
+In case of failure during loading or initialization of any plugin
+all related initialized plugins are terminated, and all related loaded
+plugins are unloaded, i.e. set of loaded and initialized plugins
+becomes equal to set which was before call of LoadPlugin().
+LoadPlugin() returns FAILURE in this case.
+
+As far as operating system loader together with main application
+module (EXE) may load plugins (DLLs) referenced implicitly
+(and they notify about it by adding own IDs to #plugins_to_init list),
+InitFrameWork() also initializes all plugins which are present at the
+moment of its call in #plugins_to_init list.
+
+TermFrameWork() terminates all initialized plugins (taking their IDs
+from #inited_plugins list starting from the end) and after this
+unloads all explicitly loaded plugins (taking their IDs from
+#loaded_plugins list starting from the end).
+
+@section base_cores_works Cores usage control
+
+Environment variable @b INT_THREAD_CFG controls allocation of server processes
+and their distribution among CPU cores.
+
+ - @b IMAPS, @b REND, @b PT - control number of cores to use per server process
+ for each kind of distributed calculations. Example: 
+ @code
+ set INT_THREAD_CFG=IMAPS:12,REND:8,PT:16
+ @endcode
+ If any field is absent, default value @b 16 is used. These are the only fields,
+ which usage can be recommended to customers. Other fields (below) are intended
+ only for internal usage, mainly for debugging.
+ 
+ - @b P, @b L - these fields override numbers of physical and logical (hyperthreading)
+ cores reported by hardware. Example:
+ @code
+ set INT_THREAD_CFG=P:4,L:8
+ @endcode
+ This overrides hardware number of cores and forces application to consider
+ PC has 4 physical cores and 8 logical cores. It is responsibility of developer
+ to keep correct rate between physical and logical cores while setting them
+ through this variable; no any checks for their values are performed.
+ - @b N - setting this field to @b 0 hides NUMA presence from application
+ thus disables NUMA optimization code on PC with NUMA.
+ - @b T - setting this field to @b 1 forces application to consider each physical
+ processor as NUMA node thus enables NUMA optimization code on PC without NUMA.
+
+If NUMA is enabled and presented on PC, @b IMAPS, @b REND, @b PT fields
+are ignored. Number of server processes then corresponds to number of
+NUMA nodes, and each process occupies exclusively own NUMA node.
+Client is counted too: if PC has 2 NUMA nodes, one node will be used by
+client process, another - by one server process.
+**/
+
+//////////////////////////////////////////////////////////////////////////////
+/**
+@page base_test Test Design
+
+@section base_envi_test Envi class
+
+The following testing procedure is used:
+
+-# Set a variable, read back its value and compare. Test passed
+   if the two values are the same.
+-# Change the value of variable used in 1) to a new one, read
+   back it's value and compare. Test passed if read value ==
+   new value.
+-# Delete variable used in 2), read back it's value. Test passed
+   if empty strin is returned.
+-# Read value of some predefined variable (e.g. in a bat file
+   before test program run). Test passed if non-empty string is 
+   returned.
+-# Read value of some pre-deleted variable (e.g. in a bat file
+   before test program run). Test passed if empty string retirned.
+
+@section base_plugin_test Plugins
+
+Test for plugin related functions loads several plugins;
+Some of these plugins depends on other plugins. All of them must
+be loaded and initialized in correct order (dependent plugin
+is initialized after plugins on which it depends). Termination
+must be performed in order which is reverse to order of initialization.
+Each plugin reports (prints) its initialization and termination events.
+**/

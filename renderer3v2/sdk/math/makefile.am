@@ -1,0 +1,40 @@
+lib_LIBRARIES = libmath.a
+
+libmath_a_CPPFLAGS = -I$(top_srcdir)/sdk
+libmath_a_SOURCES = \
+	bsphere3.cpp \
+	complex.cpp \
+	coordsys.cpp \
+	math.cpp \
+	matrix2.cpp \
+	matrix3.cpp \
+	matrix4.cpp \
+	matrix43.cpp \
+	nrnd.cpp \
+	phys_const.cpp \
+	rnd.cpp \
+	sunloc.cpp \
+	vect2.cpp \
+	vect3.cpp \
+	vect4.cpp \
+	bsphere3.hpp \
+	comb.hpp \
+	complex.hpp \
+	coordsys.hpp \
+	haltongen2d.hpp \
+	marray.hpp \
+	math.hpp \
+	matrix2.hpp \
+	matrix3.hpp \
+	matrix4.hpp \
+	matrix43.hpp \
+	nrnd.hpp \
+	phys_const.hpp \
+	polar.hpp \
+	rnd.hpp \
+	sunloc.hpp \
+	vect2.hpp \
+	vect3.hpp \
+	vect4.hpp \
+	wardcolor.hpp
+

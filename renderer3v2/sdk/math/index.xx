@@ -1,0 +1,21 @@
+/// @file
+///
+/// @brief Mathematical library. Main page.
+///
+/// @author Fvg - Vjacheslav Glukhov, KLAS, '04.09.19
+///
+/// Copyright &copy; INTEGRA, Inc., 2004.
+
+//////////////////////////////////////////////////////////////////////////////
+/**
+
+@page math_internal Internal Documentations
+
+ - @b PRODUCT_LINE: PLUG_INSPIRER
+ - @b PRODUCTS: FLY
+ - @b TASKS: KLBC
+ - @b DD: Fgk, Fvg
+ - @b VV: Piv, Pnd(OOO)
+ - @b SS: Pnd
+
+**/

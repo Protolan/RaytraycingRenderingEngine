@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{61738f2a-37ca-46b2-8bbd-cd241d361959}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{b51feacd-03c1-4a05-b107-fe689c6b482c}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fgets.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iosl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iosl_env.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iosl_ex1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iosl_ex2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iosl_ext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="iosl_env.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iosl_own.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

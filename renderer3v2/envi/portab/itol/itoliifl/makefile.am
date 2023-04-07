@@ -1,0 +1,7 @@
+lib_LIBRARIES = libitoliifl.a
+
+libitoliifl_a_CPPFLAGS = -I$(top_srcdir)/envi/include
+libitoliifl_a_SOURCES = \
+	itoliiff.c \
+	itoliifl.c
+

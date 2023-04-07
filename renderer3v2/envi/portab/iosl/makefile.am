@@ -1,0 +1,13 @@
+lib_LIBRARIES = libiosl.a
+
+libiosl_a_CPPFLAGS = -I$(top_srcdir)/envi/include
+libiosl_a_SOURCES = \
+	fgets.c \
+	iosl.c \
+	iosl_env.c \
+	iosl_ex1.c \
+	iosl_ex2.c \
+	iosl_ext.c \
+	iosl_env.h \
+	iosl_own.h
+

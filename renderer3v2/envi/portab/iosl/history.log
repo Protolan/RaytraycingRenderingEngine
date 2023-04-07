@@ -1,0 +1,174 @@
+13.02.25 Piv
+  iosl_ex1.c iosl_ext.c
+    Const modifiers are added.
+
+13.01.28 Piv akfx68di.Piv
+  iosl_env.c:
+   Annoying prints preventing visualization of useful prints are disabled.
+
+12.07.09 --- repository 388 ---
+
+12.06.22 Eed akfb01db.Eed
+  fread.c iosl.vcproj
+    integra_fread() moved from iosl.lib to base.lib; fread.c removed.
+
+11.08.01 --- repository 383 ---
+
+11.07.06 Eed aicf01dn.Eed
+  iosl_ext.c
+    Provide possibility to open files at \\server\share paths.
+
+11.04.05 --- repository 381 ---
+
+11.03.09 Piv ae3201db.Piv
+  iosl_ext.c:
+    More than one extension is allowed and is not corrected. 
+
+10.10.14 --- repository 380 ---
+
+10.06.06 Fvg 485___03.Fvg at6401di.Fvg
+  iosl_ext.c
+    New functions os_fseek, os_ftell were implemented.
+
+07.11.27 --- repository 365 ---
+
+07.11.26 Eed ae3272dn.Eed
+  iosl_ext.c
+    Behavior of GlobalMemoryStatusEx() was changed.
+    Correct possible "overflow" problems.
+
+07.06.19 --- repository 361 ---
+
+07.06.07 Eed
+  fgets.c
+    added; new function integra_fgets()
+
+07.05.07 --- repository 360 ---
+
+07.04.25 Eed ewlr06di.Eed
+  iosl_ex2.c
+    Enclose OS-specific code by #if
+
+06.10.02 --- repository 356 ---
+
+06.09.28 Eed ew64
+  iosl.c
+    Changes for compatibility with VS2005 and 64-bit
+
+06.07.24 --- repository 355 ---
+
+06.07.11 Eed exxx97nn.Eed
+  iosl_ext.c iosl_env.h
+    os_mem_*() - replace type of returning value to SIZE_T, change to KB.
+
+06.07.06 Eed at6001dn.Eed
+  fread.c iosl.vcproj
+    Add integra_fread() - correct "own shared drive" bug.
+
+02.12.07  Oek
+  iosl_ex.c: os_run() corrected for scene path
+  containing blanks which terminates by backslash
+
+02.11.27  Pls
+  iosl_ex.c: os_run() corrected for scene path
+  containing blanks.
+
+01.02.01  Eed
+  obsolete OS_MARKs (DOS, Windows 3.x) removed
+  iosl_win.c, winsys.h - removed (obsolete)
+  iosl.dos, iosl.unx - merged into iosl.c
+  iosl_ext.c - os_free_space() and os_total_space()
+               are now NOT wrappers for os_statfs() under Win32
+               (problem with GetDiskFreeSpace() on large disks)
+
+Revision 1.3  1999/05/18 09:03:45  envi
+Bug correction
+
+99.05.18  Eed
+  iosl_ex1.c: os_cmppath() added
+
+Revision 1.2  1999/03/12 10:11:57  envi
+ENVI 2.93
+
+99.03.11  Eed
+  DEBUG processing corrected
+
+'98.07.01
+Corrected ".\" processing in os_opendir()
+
+'97.11.xx Esa
+Corrected to support Visual C.
+
+'97.07.30 Eed (ELOE task)
+iosl_ext.c:     new functions os_phys_mem_free() and os_virt_mem_avail();
+                os_temp_name() corrected
+iosl.dos:       system error intercepting under Win32
+iosl_ex1.c:     os_getpath() correcting
+iosl_ex2.c:     new file
+makefile.imf:   new file addition
+iosl_own.h:     one more Linux's include file added
+makefile:       removed
+iosl.mak:       removed
+
+'97.04.15 Enk(_oh)
+iosl_ext.c:
+  os_free_space() and os_total_space() are now wrappers for os_statfs()
+  new function os_statfs()
+  new function os_lstat()
+  new function os_errno()
+  os_strerror() modified to accommodate new error scheme
+  iosl_delay() is optimized
+winsys.h:
+  one typedef added for dos platforms
+
+
+'96.11.29 Eed
+iosl_ext.c:
+  Multiply timers added.
+
+# Revision 1.8  1996/09/23  08:01:52  envi
+# ENVI release 2.81
+#
+'96.09.11 Erk
+iosl_ex1.c:
+  Corrected os_getext() and os_path2name() to deal with path that
+  contains dot in path name, e.g. "xxx.yyy\zzz".
+
+# Revision 1.7  1996/08/29  11:29:01  envi
+# ENVI release 2.80
+#
+'96.08.27 Eed
+iosl.dos, iosl_ext.c
+  Changed os_opendir() and related function to process "a:\" cases
+  for empty a:
+  Changed os_correct_name(), os_check_name() to process "." cases
+
+# Revision 1.6  1996/07/31  13:33:22  ENVI
+# ENVI 2.79
+#
+
+'96.07.22 Evr
+iosl.dos:
+  Corrected functions dealing with file system to use
+  iosl_convert_separator()
+iosl_ext.c:
+  iosl_convert_separator() corrected to suppress multiple
+  PATH_SEPARATORs. 'static' modificator removed.
+
+#
+#
+changed iosl_env.c (getenv -> ev_getenv [IEVL]) (Esa  96.04.22)
+
+modified to make os_free_space() work on Linux; was forced to introduce
+separate set of system includes for Linux (Enk 96.02.26)
+
+corrected os_localtime() for R8000 (Esa  96.02.03)
+
+corrected os_time() for supporting R8000 and compilation under
+IRIX 4.cc  (Esa  96.02.02)
+
+added new functions, corrected NT version (_vr, Esa  95.09.12)
+
+added new functions, corrected old (Esa, 95.01.17)
+
+new unified IOSL sources placed (Ezb, 94.09.20)

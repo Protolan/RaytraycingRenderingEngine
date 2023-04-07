@@ -1,0 +1,56 @@
+11.12.27 --- repository 385 ---
+
+11.12.07  Ose Pbb at6414sn.Pbb
+  col_obj.c icol.c icol_own.h lcd_xyz.c icol_ini.c
+    Extension support XYZ values for default light.
+    More precise XYZ curves from sdk/monitor/cieconv.cpp
+
+Revision 1.3  1999/03/12 10:11:52  envi
+ENVI 2.93
+
+98.02.10  Odz
+  col_obj.c: Extension of ICOL handler (spectral functions added), OPCA
+
+99.02.16  Eed
+  col_obj.c - bug correction (ebug02nb.Odz)
+
+98.01.06  Oek
+  col_obj.c, icol.c:
+    Unconditionally release allocated memory after ICOL termination
+  co_light.c: Bug is corrected, ebug01nn.Ols
+
+*.c:
+  ICOL handler is introduced (col_obj_... ), OPxx, Oek '97.10.27
+  more wide usage of algebra.h macros, Oek '97.10.18
+  algebra.h is updated (copied from TBT), Oek '97.10.18
+  bug in CIE Y match curve values (lcls01ns.Oek), Oek '97.10.18
+
+icol.h:
+  removed at all from local place  '97.04.18 :Esa
+
+icol.h:
+  moved from $INTEGRA/include and refreshed  '97.04.17 :Oek
+icol.c:
+  new col_get_wrgb() is added, OPCJ, '97.04.17 :Oek
+
+Revision 1.3  1996/08/29  11:28:06  envi
+ENVI release 2.80
+
+
+ICOL is adapted to IMAL, Oek 96.02.08
+
+icol_fb.c is changed in acc. to ES and
+FD of ICOL 2.01 version, Oek 96.02.07, OPCI
+
+Revision 1.2  1994/09/12  17:43:46  cvs
+
+ALGEBRA.H CO_LIGHT.C ICOL_FB.C:
+  added;
+line_tr3.c:
+  removed
+*:
+  Revised due to CodeCheck
+
+.....................................
+Revision 1.1  94/04/19  13:59:25  cvs
+Integra Color Library added to ENVI

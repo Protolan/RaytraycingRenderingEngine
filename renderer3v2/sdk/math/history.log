@@ -1,0 +1,898 @@
+12.03.22 Piv I2 8.23
+  matrix43.hpp vect2.hpp vect3.hpp vect4.hpp:
+    Operator + for Points. 
+
+12.02.20 Piv
+  vect2.hpp vect3.hpp:
+    Operator += for Points.
+
+13.01.28 Piv akfx68di.Piv
+  matrix3.cpp vect3.cpp vect3.hpp vect4.hpp
+    Assert with lower tolerance.
+  CIE_SUM_VECT is introduced instead of fixed coefficients,
+  it is updated from CieConv.
+
+13.01.24 Eed repository 390
+  vect3.hpp
+    Remove DotProd() as it duplicates DotProdDF().
+  matrix43.hpp
+    AboutIdentity() can not be compiled by VC 6.0; exclude it for this compiler.
+
+12.10.17 Piv akfx63di.Piv I2 8.12
+  matrix3.cpp matrix3.hpp matrix43.hpp:
+    TMatrix3::E(), TMatrix43::AboutIdentity() functions are added.
+.
+12.10.02 Piv akfx61di.Piv I2 8.11
+  vect3.cpp vect3.hpp:
+    DistinctColorGenerator, DotProd and operator - for mixed type of args
+    are added.
+  matrix43.hpp:
+    AboutEqual with tolerance arg is added.
+
+12.09.21 --- repository 389 ---
+
+12.09.03 Piv akfx60di.Piv I2 8.10
+  matrix3.hpp
+   VectorTransform() is added.
+
+12.08.03 Piv aiio04sb.Piv
+  matrix3.cpp
+    Asserts are provide to catch AIIO bugs.
+    Codes of RotationToEuler are simplified.
+    EulerRotationForLight() description is returned back.
+
+12.07.19 Pnd aiix15si.Pnd
+  matrix3.cpp
+    Correct EulerRotationForLight() description.
+  vect2.cpp vect2.hpp vect3.cpp vect3.hpp vect4.cpp vect4.hpp
+    Change way of passing dval argument for Seralize() methods of vectors.
+
+12.07.09 --- repository 388 ---
+
+12.06.21 Pnd kip105di.Pnd
+  vect3.hpp
+    Correct BBox3d::Include(BBox3d &) method to work with empty boxes.
+
+12.05.17 Piv akfx56di.Piv
+  matrix3.cpp:
+    Det() - order of summing is made classic.
+
+12.05.23 --- repository 387 ---
+
+12.04.12 Ose opwl05di.Ose
+  complex.hpp:
+    Method of division and multiplication by a real value now use
+    'double' type for it instead of T to avoid compilation warnings
+
+12.03.16 Piv akfx53di.Piv
+  vect2.cpp vect3.hpp:
+    inline TVect3<T> Max(const TVect3<T> &a, const TVect3<T> &b);
+
+12.03.14 --- repository 386 ---
+
+12.02.16 Piv akfx49di.Piv
+  math.hpp:
+    ATan2 arguments are named as in C language library.
+  matrix3.hpp:
+    Cast functions are added.
+  vect2.hpp vect3.hpp:
+    Length and SqrLength are provided as class functions.
+
+12.01.25 Pbb aicx17di.Pbb
+  vect3.hpp
+    BVect3<BYTE> ConvB() method was added.
+
+12.01.19 Piv kisg26sb.Piv
+  math.hpp vect3.hpp:
+    ClipHigher() functions are added.
+
+11.12.27 --- repository 385 ---
+
+11.11.25 Piv akfx41di.Piv
+  matrix4.cpp matrix4.hpp vect4.cpp vect4.hpp:
+    Asserts for coinciding planes.
+    IsOk() functions are added.
+    Bug in InfiniteOrtho() is corrected - division to z_near.
+
+11.10.12 Piv akfx37di.Piv
+  math.hpp:
+    False description of ATan2 is corrected.
+  matrix3.cpp matrix43.hpp:
+    Class desciption is supplemented. SetTrans(Point3) is added.
+
+11.10.04 --- repository 384 ---
+
+11.09.09 Piv akfx34di.Piv
+  marray.hpp:
+    MaxValueIndex() function.
+
+11.08.01 --- repository 383 ---
+
+11.06.10 Piv akfxr7sb.Piv
+  vect3.hpp:
+    BBox::Init(Point3<T> &point) is added.
+
+11.05.30 --- repository 382 ---
+
+11.04.11 Piv kip206di.Piv
+  math.cpp:
+    Correct order of includes.
+
+11.04.05 --- repository 381 ---
+
+11.03.30 Pbb aicf14di.Pbb
+  vect3.hpp:
+    Non-described changes.
+
+11.02.23 Raz kihb02dn.Raz
+  cdf.cpp cdf.hpp:
+    New files.
+  math.vcproj
+    New files added.
+  vect3.hpp:
+    New function CreateCoordSystem is added.
+
+11.02.02 Pls KCVR kcco01di.Pbb
+  vect2.hpp vect3.hpp
+    Vect2w and small comment correction are added.
+
+11.01.20 Piv akfx27di.Piv
+  phys_const.cpp phys_const.hpp vect3.hpp:
+    ClipLower() is added.
+
+10.12.09 Piv akfx26di.Piv
+  marray.hpp:
+    Pack() function is added.
+
+10.10.14 --- repository 380 ---
+
+10.10.11 Piv akfx25di.Piv
+  math.hpp:
+    MathI is added.
+
+10.08.27 Piv aice02sb.Piv
+  matrix4.cpp:
+    InfiniteOrtho() - division to z_near is returned to r2[2] member.
+    Math<T>::EPS_VALUE constants are replaced to Math<T>::TOLERANCE.
+
+10.08.04 --- repository 378 ---
+
+10.08.03 Eed repository 378 integration
+  math.hpp
+    optimize FloatIsOK()
+
+10.01.20 Rkv aiik01di.Raz
+  math.vcproj
+    comb.hpp is added
+  vect2.hpp
+    spelling
+
+10.07.27 Pls Pbb  aicf08di.pbb
+  matrix2.cpp matrix2.hpp
+    Serialization was added.
+
+10.06.22 Piv kuao01df.Piv
+  vect2.hpp:
+    MaxElement is added.
+
+10.05.05 Piv akfx11di.Piv
+   math.hpp:
+     FloatIsOk - parenthesis are used to make code clear.
+
+10.05.04 Piv akfxf6sb.Piv
+  matrix3.cpp:
+   MathD::TOLERANCE is returned in Rotation() function.
+
+09.10.26 --- repository 375 ---
+
+09.09.18 Pbb 90906dat.Pbb
+  phys_const.cpp phys_const.hpp
+    AVEWT2LUM3 was added.
+
+09.08.06 --- repository 374 ---
+
+09.08.04 Pbb, Pls, Pnd, Rkv, Ose kisg06di.Pbb or later updates, akfh01di.Piv
+  math.vcproj nrnd.hpp phys_const.cpp phys_const.hpp rnd.hpp:
+    KISG changes and new files
+
+09.07.02 Piv kuav01di.Piv
+  math.hpp matrix4.cpp matrix4.hpp:
+    Sqrt3() is removed - there is Cbrt.
+    InfiniteFrustum is added.
+
+09.05.08 --- repository 373 ---
+
+09.04.20 Piv uifa01di.Piv
+  marray.hpp:
+    ResiseLinear is added.
+
+09.01.12 --- repository 371 ---
+
+08.12.10 Piv kc4x28di.Piv
+  vect3.hpp vect4.hpp:
+   MaxElement for BVect classes.
+
+08.10.24 Pnd akfx07dn.Pnd
+  matrix4.cpp
+    akfx05nb.Oag bug correction
+
+08.10.30 --- repository 370 ---
+
+08.09.23 Pbb Pls kiot05db.Pbb
+  matrix3.hpp matrix43.hpp
+    SCALE_TRANSLATION_TRANSFORM case and appropriate methods were added.
+
+08.10.13 Pnd 310___02.pbb
+  marray.hpp
+    Add comparision (operator == ) method.
+
+08.09.18 Piv kc4x24di.Piv
+  matrix3.cpp matrix3.hpp:
+    RotationXYZ() and RotationToXYZAngles() are added.
+  matrix43.hpp
+    Temporarily SCALE_TRANSLATION_TRANSFORM is disabled.
+
+08.09.12 Pbb Pls kiot04db.Pbb
+  matrix43.hpp
+    Matrix with scale and translation only was considered.
+
+
+08.09.09 Piv kc4x22di.Piv
+  matrix3.cpp matrix3.hpp:
+    RotationZYX() and RotationToZYXAngles() are added.
+
+08.08.26 Piv kitr01di.Piv
+  wardcolor.hpp:
+    Comments to clarify the code.
+
+08.07.28 --- repository 369 ---
+
+08.05.30 Piv kc4x20di.Piv
+  matrix43.cpp matrix43.hpp:
+   VectorTransform -> VectorTransformed
+
+08.05.08 --- repository 368 ---
+
+08.05.05 Piv kc4x19di.Piv
+  wardcolor.hpp:
+    base.hpp is included.
+
+08.04.18 Piv kc4x18di.Piv
+  math.cpp math.hpp:
+    Round() is corrected - do not create -0.0  from 0.
+  vect3.cpp:
+    ::Round() is used.
+  wardcolor.hpp:
+    GetRGBE(Set4b &) is added.
+
+08.04.11 Pls KC4T kc4y01di.Pbb
+  vect2.hpp
+    TrgArea() is added.
+
+08.03.17 --- repository 367 ---
+
+08.03.07 Piv kc4x15di.Piv
+  wardcolor.hpp:
+    Necessary functions are added.
+
+08.02.07 Piv kc4x14di.Piv
+  vect2.hpp vect3.hpp vect4.hpp:
+    Some new functions are added.
+
+08.01.15 --- repository 366 ---
+
+07.11.29 Ose
+  vect3.hpp, math.hpp:
+  small optimisation of calculation of Log2(), also Set3d=BVect3<double> added
+  const T v ---> const T &v
+
+07.11.27 --- repository 365 ---
+
+07.11.01 Piv ak6401di.Piv
+  math.hpp vect2.hpp vect3.hpp vect4.hpp:
+    ClipLower() is added, const modifiers are added
+
+07.10.03 --- repository 363 ---
+
+07.08.23 Piv
+  vect3.hpp:
+    DotProdDF() is added - for acceleration.
+
+07.08.08 --- repository 362 ---
+
+07.07.26 Piv kc4x34sb.Piv
+  vect2.hpp vect3.hpp:
+    AboutEqual() with explicitly pointed tolerance are added.
+
+07.07.19 Piv kc4x11di.Piv
+  math.cpp vect2.hpp vect3.hpp:
+    Required constants for Math<int> are provided.
+    TVect3 TPoint3 and TPoint2 AboutEqual() functions are added - they
+    are required for classes using these classes as template argument,
+    and AboutEqual() function of arguments. Special Math3 class is
+    wrong decision.
+
+07.06.19 --- repository 361 ---
+
+07.06.14 Piv kc4x09di.Piv
+  math.cpp math.hpp vect3.cpp vect3.hpp:
+    FloatIsOK() function is provided
+    Vect3::Axis()  function is provided
+    VertAngle()  function is provided
+    BBox3::GetVertex()  function is provided
+
+07.05.07 --- repository 360 ---
+
+07.04.25 Eed ewlr06di.Eed
+  bsphere3.cpp complex.cpp math.cpp matrix2.cpp matrix3.cpp matrix4.cpp
+  matrix43.cpp vect2.cpp vect3.cpp vect4.cpp marray.hpp vect2.hpp vect3.hpp
+    Correct GNU compiler errors
+
+07.03.30 Pnd kisu01di.Pnd
+  math.hpp
+    Add ValToange() function.
+  vect2.hpp vect3.cpp vect3.hpp vect4.hpp
+    Add ValToange() function, BaseType definition and operator /=.
+
+07.03.07 Piv kc3x43sb.Piv
+  math.cpp:
+    Constant is corrected.
+
+07.02.28 Piv kc4p01di.Piv
+  marray.cpp marray.hpp matrix4.cpp vect3.hpp:
+    New functions are added.
+    Bug in the Matrix4::InfiniteOrtho() is corrected.
+
+06.12.25 --- repository 358 ---
+
+06.12.13 Piv kc3x22di.Piv
+  marray.hpp:
+    Constructor from the given values is provided.
+
+06.11.23 Fvg kc2u04db.Fvg
+  matrix4.hpp matrix4.cpp:
+    Method Intersects() renamed to Visible() and corrected.
+
+06.11.17 --- repository 357 ---
+
+06.11.10 Piv kc3x20di.Piv
+  vect3.hpp:
+    BBox::IsEmpty() is provided in order do not go crazy with !NotEmpty()
+
+06.10.02 --- repository 356 ---
+
+06.09.29 Piv kc3x19di.Piv
+  matrix43.hpp:
+    Comments are corrected.
+
+06.09.28 Piv kc3x17di.Piv
+  marray.hpp polar.hpp:
+    A family of StableSort functions is enlarged, comments are added.
+
+06.08.14 Piv kc3x15di.Piv
+  math.hpp matrix4.cpp sunloc.cpp wardcolor.hpp:
+    TD corrections.
+
+06.07.04 --- repository 354 ---
+
+06.06.30 Piv kc2x08di.Piv
+
+  vect3.hpp:
+    IsPositiveComp() is added.
+
+06.06.05 Enk RMCD rmcu05di.Pbb
+  vect3.hpp
+    Vect3u definition added
+
+06.06.07 Piv kc2x04di.Piv
+  rnd.hpp nrnd.hpp nrnd.cpp:
+    QRnd(), DRnd() -> virtual DRnd()
+    QRndPtr(), DRndPtr() -> virtual DRndPtr()
+    Some virtual functions are added to remove MCRT clone.
+  vect3.hpp vect3.cpp:
+    BBox3:: operator *=
+  matrix3.cpp:
+    Comments are corrected.
+
+06.05.12 Piv kc2x02di.Piv
+  math.hpp:
+    Declaration of Round(T &v, double level) is removed.
+
+06.06.05 Fvg KC2U04di.Fvg kc2x03di.Piv
+  matrix4.cpp, matrix4.hpp, vect3.hpp, vect3.cpp rnd.cpp vect2.hpp:
+    CVV - canonical view volume usage
+
+06.06.05 Piv kc3x12di.Piv kc2x03di.Piv
+  math.hpp vect3.hpp vect3.cpp:
+    Round(T &v, double level), Round(double level) functions are added.
+  matrix3.hpp:
+    Descriptions are corrected.
+
+06.06.05 Piv kc3x05di.Piv kc2x03di.Piv
+  matrix4.cpp matrix4.hpp:
+    Orthogonal camera support is provided.
+    InfiniteOrtho() is added, huge functions are moved to CPP.
+
+06.03.21 Eed Repository 352 integration
+  rnd.cpp rnd.hpp
+    correct Gauss() description according to ae3215nn.Ose
+
+06.02.21 Piv kc3h01di.Piv kc3x03di.Piv
+  coordsys.cpp coordsys.hpp polar.hpp:
+    Minor corrections
+  sunloc.cpp sunloc.hpp:
+    New files.
+  math.vcproj:
+    New files are added.
+  vect3.hpp:
+    CIENormalize() function is added.
+
+06.02.21 Rdz kc2i04di.Rdz
+  math.hpp
+
+06.01.23 Enk KLBL klbl05dn.Enk
+  complex.cpp complex.hpp math.hpp math.vcproj overview.hh
+    Fast complex math implementation added.
+
+05.12.12 Piv kc2x02di.Piv
+  wardcolor.hpp:
+    Is put to INTEGRA_NAMESPACE
+
+05.11.11 Piv kc3u01di.Piv kc3u06di.Piv
+  haltongen2d.hpp:
+    Coding violations are removed.
+
+05.10.12 Oek at59h7cb.Pbb at5952db.Oek
+  rnd.hpp, rnd.cpp
+    Operators ==, != and copy constructor are introduced.
+
+05.05.03 Pbb aicx08si.piv
+  wardcolor.hpp
+  moved here from home/math2
+
+05.05.03 Oek kc1h02di.Oek
+  haltongen2d.hpp test.xx introduction.hh:
+    Use Halton's quasi generator for HDRI rendering support
+
+05.03.17 Piv akf510si.Piv
+  vect3.hpp:
+    VectorOK() is provided
+
+05.01.28 Piv aicx01dn.Piv
+  marray.hpp:
+    StableSort function and auxiliary class ValOrd are added.
+
+05.01.28 Pbb klrp06dn.Pbb
+  marray.hpp
+    SSE functions are moved to the simd/qbinsearch.hpp
+
+05.01.19 Eed klas07di.Eed
+  index.hh
+    Convert @mainpage to @page
+
+05.01.17 Pbb Pls klrp03di.pls
+  marray.hpp
+    SSE methods from klrp09di._aa added.
+
+04.12.19 Piv klas10di.Piv
+  rnd.hpp:
+    Braces on separate lines.
+
+04.12.14 Fvg klas04di.fvg klas06di.fvg
+  math.hpp vect4.hpp rnd.cpp marray.hpp polar.hpp
+  coordsys.hpp coordsys.cpp marray.cpp
+  polar.gif vect3.hpp bary_coord.gif
+    TD update.
+
+04.11.29 Pnd klas08di.Pnd
+  test.xx overview.hh introduction.hh index.xx how.xx assumptions.xx
+    Corrections to provide unique tag names
+
+04.11.18 Fvg klas01di.Fvg
+  overview.hh how.hh bsphere3.cpp index.hh nrnd.hpp nrnd.cpp rnd.hpp rnd.cpp
+  polar.hpp matrix2.hpp marray.hpp math.hpp bsphere3.hpp matrix4.hpp
+  matrix4.cpp matrix43.hpp matrix43.cpp matrix3.hpp math.cpp vect2.hpp
+  vect4.cpp vect4.hpp vect3.hpp vect3.cpp vect2.cpp matrix3.cpp matrix2.cpp
+  index.xx assumptions.xx how.xx test.xx
+    Programming manual for Integra SDK
+
+04.11.05 Pnd klas01di.Pnd
+  bary2.* ciecolor.* crc.* ifunc.hpp mdict.* mesh.hpp mesh1d.* meshcell.hpp
+  mtabfunc.hpp qvect3.hpp sse.* tspline.* ttabfunc.* ward_col.hpp wardcolor.*
+    The files were moved to home/MATH2 library.
+
+04.11.05 Pbb Pls klas02di.pbb
+  qvect3.hpp sse.*
+    Removed.
+
+04.11.05 Fvg KLAS klas01ds.fvg
+  overview.hh how.hh bsphere3.cpp index.hh nrnd.hpp nrnd.cpp rnd.hpp rnd.cpp
+  polar.hpp matrix2.hpp marray.hpp math.hpp bsphere3.hpp matrix4.hpp
+  matrix4.cpp matrix43.hpp matrix43.cpp matrix3.hpp math.cpp vect2.hpp
+  vect4.cpp vect4.hpp vect3.hpp vect3.cpp vect2.cpp matrix3.cpp matrix2.cpp
+    Programming manual for Integra SDK
+
+04.11.03 _ak CW22 cw2203di.Mig
+ math.vcproj index.htm
+ coordsys.cpp, coordsys.hpp, coordsys.htm added
+  coordsys moved from scene to math project
+
+04.10.12 Pbb akf511db.Pbb
+  matrix43.hpp
+    TransformationType() method was added.
+
+04.10.06 Pnd klas01di.Pnd
+  rnd.hpp math.htm math.hpp
+    Max/Min functions were moved to BASE library.
+    Corrections due to new repository structure.
+
+04.07.29 Udv KUSE kuse03di.udv kuse03va.ovn
+   vect4.?pp
+     NComponents() method was added to BVect, vector template
+     instantiation for float and int.
+
+04.07.29 Piv akfsb4sb.Piv
+   math.hpp:
+     Log2() is added
+
+04.07.22 Fvg aiif91db.Fvg aiifh2sb.ovn
+  vect2.hpp vect3.hpp vect3.hpp:
+    bug correction (Function DotProd)
+
+04.07.22 Oek at5911db.Oek 40701dat.oek at5979sb.pbb
+  bary2.cpp, bary2.hpp, math.cpp
+    New class is added
+
+04.07.07 Oek rif204di.Oek rif203va.pls
+  vect3.hpp:
+    ConvW() method is added
+
+04.06.24 Piv 40604dat.Piv
+   bsphere.cpp:
+     Correction from akfsa4sb.Piv is cancelled
+
+04.06.20 Fvg aiif86cb.Ovn aiif75db.fvg aiifc8sb.ovn
+  matrix2.hpp matrix2.cpp
+    New method Rotation()
+
+04.06.07  Enk 40603dat.pbb
+  matrix4.hpp
+  KLVM corrections
+
+04.05.17 Oek ae3201db.oek
+  rnd.hpp
+  Normalization is excluded from IRnd as it leads to degradation (atxx01nb.Enk)
+
+04.05.06 Piv akfsa4sb.Piv
+   bsphere.cpp:
+     Bug correction
+
+04.05.06 Pbb Pls akfs06di.pbb
+  matrix3.cpp
+    MathD::TOLERANCE was replaced by  MathF::TOLERANCE
+    in TMatrix3<T>::Rotation() due accuracy problem during import TBT scene.
+
+04.04.14 Pbb Pls
+  matrix3.cpp matrix3.hpp
+  Serialization added
+
+04.03.26 Mvr KIFA16di.Mvr
+  vect4.cpp, vect4.hpp:
+    Added serialization for TVect4 template
+
+04.02.20  Pbb, Pls
+  sse.cpp sse.hpp
+  SSE initialization moved to sse_init() function.
+
+04.01.18 Enk
+matrix4.hpp
+  replaced nVidia SDK IM of inverse matrix with straight forward
+  cramer's one to fix bad inv matrix in some cases
+
+04.01.09 Enk
+  vect2.hpp added Width() and Height() methods to bbox
+
+03.12.19 Pbb, Pls
+  matrix3.hpp inline => INLINE.
+
+03.12.08 Oek (AT58)
+  rnd.cpp, rnd.hpp
+  compatibility with Visual Ray.
+
+03.11.28 Oek (AT58)
+  coordsys is moved to Math library
+
+03.11.13 Oek (AT58)
+  Renormalization is unified for pseudo- and quasi- generators
+
+03.09.23 Pbb (KIOT)
+  IsOnlyTranslation() and PointTranslated() methods are added.
+
+03.09.11 Piv 30903dat.Piv
+  matrix3.cpp:
+  Description of RotationDirTwist() is extended
+
+03.08.01 Piv 30801dat.Piv
+  matrix3.cpp,   matrix3.hpp,  vect3.hpp:
+  new functions
+
+03.07.23 Pbb
+  marray.hpp - Bug in QSort() corrected klbm01db.Pbb
+
+'03.07.16 Piv akf575sb.Piv
+  matrix43.hpp:
+  PointTransformed() is added.
+
+03.06.28 Pbb, Pls akf509nn.Pbb
+  qvect3.hpp sse.hpp sse.cpp:
+  KLMI
+
+03.06.20 Ose
+  rnd.hpp -  Correction of Generation deviate with density uniform
+             on a sphere
+  vect4.hpp - template correction
+
+03.06.06 Oek
+  Reasonabe number of dimensions of Niederreiter sequence is reduced 1024->26,
+  see rmaq02nn.Oek
+
+03.05.20 Ose, Pls. KLBM
+  NEW MODULES mesh1d.cpp ttabfunc.cpp mesh.hpp, mesh1d.hpp meshcell.hpp
+              mtabfunc.hpp ttabfunc.hpp
+  Rectangular 1D- 4D meshes and uni and bivariate functions were added
+
+  rnd.hpp -  Generation deviate with density uniform on a sphere was added
+
+  vect2.hpp, vect3.hpp vect4.hpp -
+      Real template support.
+
+  math.vcproj - new modules were added
+
+03.04.03 Pbb, Pls
+ qvect3.hpp sse.hpp sse.cpp
+ KLRI background and materials changes
+
+03.04.03 Pnd
+  bvect2.htm bvect3.htm vect3.hpp vect2.hpp:
+    Smooth recovery of IL 1.72 files
+    NComponent() method was added to Bvect2/BVect3 classes
+
+03.03.25 Pbb
+  sse.cpp, sse.hpp:
+  sse_MIN_VALUE[4] was added
+
+
+'03.03.25 Piv 30308dat.Piv
+  matrix43.hpp:
+AboutEqual() is added for bug correction akf554sb.Piv
+
+03.03.05 wardcolor.hpp rilr11vi.Oek
+  There is misuse of WardColor(double) and WardColor(DWORD) constructors
+
+03.03.14 Pnd, KLOM integration
+  crc.*
+  Add UpdateCRC(double)
+
+03.02.25 Pnd (KLOM)
+  vect2.hpp, vect3.hpp:
+  NComponents() method was added
+
+03.02.24 Pbb
+  sse.hpp, sse.cpp, sse.htm
+  added by Rkd during KLRI task
+
+03.01.22 Piv
+  math.hpp:
+  Assert in Pow() function is corrected.
+
+02.11.30 Piv akf504si.Piv
+  matri43.hpp matri43.cpp
+  InverseRot(), ToIDML_Matrix(), ToOGL_Matrix() are added (klfr01sb.Piv)
+
+02.11.25 Piv akf515sb.Piv
+  math.hpp
+    bug in AboutZero() is corrected
+
+02.11.15 Mvr, akf501dn.Mvr
+  marray.hpp
+  Added MArray::QSort(TArray<int>)
+
+02.11.10 Pls
+  wardcolor.hpp, math.dsp, wardcolor.htm:
+  Include WardColor class:  RUIH Pls '02.11.17
+
+02.10.10 Mip
+  vect2.hpp
+    Point2l type added
+
+02.10.23 Piv, akf4g0sb.piv
+  vect3.hpp
+  TrgArea() is added - moved from MaxLumCalculator
+
+02.09.30 Pls
+  rnd.hpp rnd.cpp rnd.htm
+  Excludind asserrtion operator in DRnd(double a, double b) method
+
+02.09.12 Piv
+  vect3.hpp tvect3.htm
+  MaxElement(), MaxNormalize() functions are added.
+
+02.08.19 Piv
+  matrix3.cpp:
+  RotationToEulerForLight() = corrections according akl102db.Piv
+
+02.07.12 Piv
+  nrnd.hpp nrnd.cpp
+  Freeing memory in destructor
+
+02.04.26 Piv
+  matrix3.hpp, matrix3.cpp
+  EulerRotationForCamera(), RotationToEulerForCamera(),
+  EulerRotationForLight(), RotationToEulerForLight() functions added
+
+02.04.22 Piv
+  matrix3.hpp, matrix3.cpp
+  RotationZDirTwist(), RotationNZDirTwist() methods added
+
+02.04.17 Oek
+  math.hpp, math.htm
+  Sqrt3() - cube root for any domain is added, RMAS
+
+02.03.29 Piv
+  matrix3.cpp
+  kilc05dn.Piv - RotationToEuler is corrected for singular case
+
+02.03.26 Oek
+  mdict.* (new)
+  MDict template is added, RMAS
+
+02.03.06 Mvr
+  matrix3.hpp
+  akf404db.Mvr - remove INLINE for matrix multiplication
+
+02.03.05 Pnd
+  nrnd.cpp nrnd.hpp (new)
+  Separate Niederreiter class from Rnd class
+
+02.03.04 Rkd
+  rnd.cpp, rnd.hpp
+  Niederreiter class implemented
+
+02.02.10 Fvg
+  matrix3.hpp, matrix3.cpp, tmatrix3.htm
+  New method Rotation()
+
+02.01.23 Fgk
+  matrix3.hpp, matrix3.cpp, tmatrix3.htm
+  Bug correction of the method RotationYPR(), KLBC13db.Fgk
+
+01.09.17 Fgk
+  vect2.hpp, vect3.hpp
+  Bug correction of the methods Project(), KLBC11db.Fgk
+
+01.08.23 Rkd
+  vect4.hpp - file added
+
+01.07.16 Pnd
+  matrix43.* - E() method added
+
+01.05.20 Rkd
+  matrix2.hpp - added operator TPoint2<T> * TMatrix2<T>
+  matrix43.hpp - constructor TMatrix43<T>(const double a) added
+
+01.04.26 Pls
+  math.dsp, tspline.*, makefile.imf:
+  Spline functionality is added, Oaf, Pls. opcl02di.Pls
+
+01.04.24 Pnd
+  marray.htm, index.htm, marray.hpp
+  AE31 - Changes due to intoduction of GArray class
+  caused by SGI portability problems
+
+01.04.22 Fgk
+  matrix43.cpp, bug correction in ViewMatrix()
+  Bug correction, KLBC09db.Fgk, '01.04.22
+
+01.04.06 Pnd
+  vect2.hpp, vect3.hpp, crc.cpp
+  Updates for smooth complation at LINUX
+
+01.03.25 Fgk
+  vect2.hpp, vect3.hpp - warnings during test/test_math.cpp compilation
+
+01.03.13  Pnd
+  marray.*:
+  MArray class is moved to math library from base one
+
+01.03.02  Pnd
+  matrix.hpp:
+  Usage of TArray, simplification
+
+01.03.02  Pnd
+  matrix.hpp, tmatrix.htm
+  New files added (after Ose).
+
+'01.03.01 :Pnd
+Add (after Rkd) TVect3<T>::CIESum() method
+Rename GetCenter(), GetDiag() methods of bounding boxes to Center(), Diag().
+
+'00.02.28 :Rkd
+crc.* - new files added
+
+01.02.19  Pnd
+  Separation of MArray from TArray
+
+'01.01.30 :Fgk
+isoline.* - new files added
+
+'00.01.11 :Pnd
+Rename operator <=() for Vect2, Vect3 by LessOrEqual() - klbc01nb.Oek
+
+'00.12.12 :Rkd
+bsphere3.hpp, bsphere3.cpp - new files added
+
+'00.12.05 :Pnd
+Full reconstruction of vector / point classes.
+Introduction od Set3b, Set3u, Set3i etc. types (vectors without arithmetics).
+Rename static methods Vect2(), Vect3(), Point2(), Point3() by the same
+name Cast().
+Making AboutZero(), AboutEqual() as static members of Math (Math2, Math3)
+classes.
+
+'00.10.05 :Rkd
+math.hpp, matrix2.hpp, matrix3.hpp, matrix43.hpp, vect2.hpp, vect3.hpp
+T changed to const T because of compilation problems on IBM
+
+'00.10.04 :Pnd
+math.hpp, math.cpp:
+Remove PI, M_EPSILON constants from Math class,
+make PI and EPSILON global macros
+
+'00.10.02 :Pnd
+math.cpp:
+Math<double>::TOLERANCE is changed to EPS_FLOAT
+
+'00.10.01 :Rkd
+math.cpp:
+Instantiation of Math<T> and BBox1<T> classes added
+
+Revision 1.4  2000/09/14 08:46:59  envi
+MATH updates
+
+00.09.13  Rkd
+distrib.hpp, math.hpp, matrix2.hpp, matrix3.hpp,
+matrix43.hpp, vect2.hpp, vect3.hpp
+The following changes are done:
+- !!Attention!!: Normalize() method now returns length of vector, while
+  earliar it was normalized vector itself;
+- Clip() method and functions now clip passed value, nothing is returned
+- Implicit casting of scalars and points into vectors is prohibited,
+  corresponding constructors are made explicit (more strong type control);
+- Tolerance() methods in Math<T> class replaced by TOLERANCE constant;
+- Some functions like Center() now accept only Point<T>, not Vect<T>;
+- Vect2i, Vect3i are now defined as TVect<T> instead of BVect<T> as before;
+
+00.08.30  Rkd
+  math.cpp: M_EPSILON constant is added to math class
+  matrix3.cpp: Tolerance() changed to TOLERANCE
+  vect3.cpp: TVect3::MaxElementIndex() is moved to vect3.hpp,
+             BVect changed to TVect in LIB_TEMPLATE_INSTANCE
+  vect2.cpp: BVect changed to TVect in LIB_TEMPLATE_INSTANCE
+
+Revision 1.3  2000/08/11 05:48:23  envi
+New updates
+
+00.08.10  Fgk
+  matrix3.cpp - bug correction, klbc08db.Fgk
+
+Revision 1.2  2000/06/30 07:13:52  envi
+New updates
+
+Revision 1.1  2000/02/10 07:09:55  envi
+ENVI 2.96
+
+00.06.02  Fgk
+  matrix3.cpp - bug correction, KLGM02db.Fgk
+
+00.01.25  Eed
+  *.cpp - LIB_TEMPLATE_INSTANCE() added

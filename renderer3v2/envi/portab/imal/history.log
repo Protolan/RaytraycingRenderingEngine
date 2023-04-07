@@ -1,0 +1,44 @@
+10.10.14 --- repository 380 ---
+
+10.09.02 Eed lmax01dn.Eed
+  class.c imal.c locked.c mode.c rtl.c imal_loc.h
+    IMAL interface changed (unsigned -> SIZE_T).
+  imal.vcproj
+    Treat warnings as errors.
+
+07.05.07 --- repository 360 ---
+
+07.04.25 Eed ewlr06di.Eed
+  class.c imal.c locked.c mode.c rtl.c
+    Remove GNU compiler warnings
+
+Revision 1.2  2000/02/10 07:09:50  envi
+ENVI 2.96
+
+00.02.10  Eed
+  imal.c - correction of Ose's bug (ebug36nn.Eed)
+
+00.02.09  Ose
+  small error in imal.c (line 1075, marked "/* Ose */") corrected
+  (synchronisation of name and block starting address)
+
+Revision 1.1.1.1  1998/07/29 12:43:40  envi
+Import ENVI to repository
+
+98.06.15 Eed
+  LMAL task results insertion (imal.c)
+
+Revision 1.3  1994/10/24 06:01:52  cvs
+~
+
+imal.c: LMAL01DB.Evv
+  Bug in checking block name length corrected.
+
+Revision 1.2  1994/05/10  12:49:15  cvs
+
+IMAL.MAK
+  DOS makefile added
+
+Revision 1.1  94/04/19  14:01:13  cvs
+history.log started
+

@@ -1,0 +1,38 @@
+﻿  annfile.cpp
+  batchuser.cpp
+  config.cpp
+  cores.cxx
+  cputopology.cxx
+  envi.cpp
+  file.cpp
+  filestream.cpp
+  frw.cpp
+  guid.cpp
+  iarray.cpp
+  input_file.cpp
+  iuser.cpp
+  marray.cpp
+  memclass.cpp
+  memstream.cpp
+  mpsync.cpp
+  object_map.cpp
+  outfile.cpp
+  pathstr.cpp
+  Создание кода...
+  Компиляция...
+  plugins.cpp
+  serializer.cpp
+  str.cpp
+  threads.cpp
+  thread_time.cxx
+  time.cpp
+  tsync.cpp
+  user.cpp
+  ustr.cpp
+  Создание кода...
+  assert.c
+  map_envelop.cxx
+  thread_group.cpp
+  Создание кода...
+     Создается библиотека C:\Users\alang\Desktop\renderer3v2/libd64/Base.lib и объект C:\Users\alang\Desktop\renderer3v2/libd64/Base.exp
+  base.vcxproj -> C:\Users\alang\Desktop\renderer3v2\bind64\Base.dll

@@ -1,0 +1,10 @@
+lib_LIBRARIES = libiifl.a
+
+libiifl_a_CPPFLAGS = -I$(top_srcdir)/envi/include
+libiifl_a_SOURCES = \
+	fserv.c \
+	iifl.c \
+	img_buff.c \
+	var_serv.c \
+	iifl_own.h
+

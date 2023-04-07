@@ -1,0 +1,59 @@
+13.02.18 Pbb SPEC-4
+  fserv.c
+    New variable is stored now only in case when resolution exceed 65535
+    for compatibility with old versions.
+
+12.07.09 --- repository 388 ---
+
+12.05.23 --- repository 387 ---
+
+12.05.17 Pls at6510sb.Pbb
+  fserv.c var_serv.c iifl_own.h
+    Additional correction to the at6501db.Pls
+
+12.05.14 Pls at6501db.Pls
+  fserv.c var_serv.c iifl_own.h
+    Restriction on image resolution is corrected.
+
+11.04.05 --- repository 381 ---
+
+11.01.17 Pbb at6480sb.pbb
+  fserv.c
+    Cast to INT64 was corrected.
+
+10.10.14 --- repository 380 ---
+
+10.06.06 Fvg 485___03.Fvg at6401di.Fvg
+  fserv.c
+    New functions os_fseek, os_ftell are used instead of fseek, ftell.
+
+09.08.06 --- repository 374 ---
+
+09.07.25 Odz kisg02dn.Odz
+  fserv.c, iifl.c, img_buff.c, iifl_own.h:
+    Unlimitted header IIFF file size (length of components up to 64k)
+
+$Log: history.log,v $
+
+01.09.17  Eed
+  fserv.c: bug correction at5706nb.Mvr in functions
+    fl_write_lines(), fl_read_sys_vars()
+
+Revision 1.3  1999/03/12 10:11:53  envi
+ENVI 2.93
+
+99.03.11  Eed
+  DEBUG processing corrected
+
+Revision 1.2  1998/10/16 10:50:21  envi
+Bug correction
+
+'98.10.16 Eed
+  fserv.c - char buffer size increased (ebug08nn.Obb)
+
+Revision 1.1.1.1  1998/07/29 12:43:38  envi
+Import ENVI to repository
+
+Revision 1.1  1994/04/19 14:01:00  cvs
+history.log started
+

@@ -1,0 +1,10 @@
+﻿  col_obj.c
+  co_light.c
+  icol.c
+  icol_fb.c
+  icol_ini.c
+  lcd_cre.c
+  lcd_xyz.c
+  rgb_clip.c
+  Создание кода...
+  icol.vcxproj -> C:\Users\alang\Desktop\renderer3v2\envi\lib64\icol.lib

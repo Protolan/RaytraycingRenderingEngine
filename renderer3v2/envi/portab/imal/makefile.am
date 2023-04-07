@@ -1,0 +1,11 @@
+lib_LIBRARIES = libimal.a
+
+libimal_a_CPPFLAGS = -I$(top_srcdir)/envi/include
+libimal_a_SOURCES = \
+	class.c \
+	imal.c \
+	locked.c \
+	mode.c \
+	rtl.c \
+	imal_loc.h
+

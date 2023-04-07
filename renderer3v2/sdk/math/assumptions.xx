@@ -1,0 +1,21 @@
+/// @file
+///
+/// @brief "Design assumptions and intentions" page.
+///
+/// @author Fvg - Vjacheslav Glukhov, KLAS, '04.11.08
+///
+/// Copyright &copy; INTEGRA, Inc., 2004.
+
+//////////////////////////////////////////////////////////////////////////////
+/**
+
+@page math_assumptions Design assumptions and intentions
+
+The main purposes of the mathematical library elaboration are:
+- unification of most arithmetical and algebraic operations and mathematical 
+approaches to solution similar problems;
+- usage OOP advantages, readability, maintainability, easy integration between
+codes of the various development groups;
+- portability, easy transfer between various platforms.
+
+**/

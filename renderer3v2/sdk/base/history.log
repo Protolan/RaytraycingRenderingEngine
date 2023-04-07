@@ -1,0 +1,1352 @@
+13.03.26 Pls KCCD
+  win_msgs.hpp
+    KCCD task messages were added.
+
+12.03.22 Piv I2 8.23
+  serializer.hpp:
+    IO_FLAG_SAVE_LOCAL is added.
+
+13.01.28 Piv akfx68di.Piv
+  time.cpp:
+    IsCorrect() is corrected.
+
+12.12.17 Peb
+  pathstr.cpp
+    Correct handling of a path with '\' ending added. (another revision, with PathStr::Path() conflicts avoiding)
+
+12.12.07 Peb
+  pathstr.cpp
+    Correct handling of a path with '\' ending added.
+
+12.10.25 Pnd aiix18si.Pnd
+  pathstr.cpp
+    PathStr::ListFilesAndFolders() further corrections.
+
+2.10.22 Eed aiix07dn.Eed
+  str.hpp pathstr.cpp
+    PathStr::ListFilesAndFolders() method added.
+
+12.10.17 Piv akfx63di.Piv I2 8.12
+  iuser.cpp user.hpp:
+    ProcessEvents() is added.
+
+12.10.02 Piv akfx61di.Piv I2 8.11
+  barray.hpp barrays.hpp:
+    Grammar or spacing.
+  iuser.cpp user.hpp
+    Secondary InitProgress and TermProgress logging is disabled.
+    MultiProgressBar usage.
+    stopable arg to InitProgress to indicate that calculation can be
+    stopped by User.
+  pathstr.cpp:
+    MakeDir is corrected.
+
+12.09.21 --- repository 389 ---
+
+12.09.05 Peb
+  pathstr.cpp
+    PathStr::MakeDir() - protection of cycling.
+
+12.08.13 Piv akfx59di.Piv I2 8.01
+  batchuser.cpp:
+    SetBreak() in the Break() is called after Ask() confirmation.
+  matrix.hpp:
+    ResizeBilinearCycled() is added.
+
+12.08.01 Pls akfb03db.pbb
+  ustr.cpp
+    The line int init_length = Min(ipos, 10); was removed. It cause assert for long names
+
+12.07.09 --- repository 388 ---
+
+12.07.03 Eed repository 388 integration
+  batchuser.cpp compress.cpp file.cpp frw.cpp iuser.cpp
+  pathstr.cpp serializer.cpp str.cpp threads.cpp threads.hpp
+    Corrext dox errors.
+
+12.06.22 Eed akfb01db.Eed
+  frw.h frw.cpp base.vcproj
+    New files frw.*.
+    integra_fwrite() - workaround for fwrite() implemented.
+    integra_fread() moved here from iosl.lib.
+  file.cpp
+    fread() and fwrite() replaced by integra_fread() and integra_fwrite().
+  thread_time.cxx
+    Superfluous inclusion of "export.h" removed.
+
+12.05.23 --- repository 387 ---
+
+12.04.12 Ose opwl05di.Ose
+  batchuser.cpp
+    Correction of Information() method
+  file.?pp
+    GetCh() method added to read one character
+
+12.05.22 Eed repository 387 integration
+  file.hpp file.cpp
+    Duplication of File::Read() removed.
+
+12.05.17 Eed akfx06dn.Eed
+  xarray.hpp xarray.cpp base.vcproj
+    XArray added (large array, up to SIZE_T number of elements).
+  bytestream.hpp bytestream.cpp memstream.hpp memstream.cpp
+  filestream.hpp filestream.cpp
+    Change internal data storage from TArray to XArray.
+    Change length-related variables and parameters from int to SIZE_T.
+  file.hpp file.cpp
+    File::Read() parameter change from int to SIZE_T.
+  arrays.hpp
+    Correct dox errors.
+
+12.05.05 Pnd kip104di.Pnd
+  iuser.cpp
+    Add assert to ErrorNoMemory()
+  serializer.cpp serializer.hpp
+    Add serialization entity types.
+    Correct headers and dox descriptions.
+
+12.05.02 Piv akfx54di.Piv I2 7.82.1
+  matrix.hpp matrix3d.hpp:
+    SwapColumns() functions are added.
+  memstream.cpp:
+    Integration.
+
+12.04.25 Pnd akfb02db.Pnd
+  arrays.hpp memstream.cpp
+    akfb05cb.piv bug correction (problems with huge memory).
+
+12.03.16 Piv akfx53di.Piv I2 7.82
+  file.cpp file.hpp
+    OKAY File::ReadStr(Str &str, int max_length)
+    void Read(BYTE *out_buff, SIZE_T len_buff, SIZE_T &out_size);
+  matrix.hpp matrix3d.hpp
+  barrays.hpp bytestream.hpp file.cpp file.hpp
+  filestream.cpp filestream.hpp guid.cpp memstream.cpp
+  memstream.hpp serializer.hpp:
+    Processing of data with size over 2 GB limit.
+
+12.04.05 Peb aicx24di.Pbb
+  threads.cpp threads.hpp
+    The IntEnableWindow() and IntGetParent() functions were added.
+
+12.03.19 Pls aicx23di.Pbb
+  pathstr.cpp str.hpp
+    IsDirWritePerm() method was added.
+
+
+12.03.14 --- repository 386 ---
+
+12.03.14 Eed repository 386 integration
+  str.hpp
+    Remove empty destructors.
+
+12.02.16 Piv akfx49di.Piv
+  iuser.cpp user.hpp:
+    IsEventFilterUsed() function is added.
+
+12.02.03 Pls aicx17di.Pbb
+  file.cpp file.hpp
+    The IsEndOfFile() method was introduced.
+
+12.01.31 Pbb aicx17di.Pbb
+  user.hpp iuser.cpp
+    The GetPersIntegraPath() method was introduced.
+
+12.01.17 Eed ae32b6dn.Eed
+  envi.hpp envi.cpp
+    Add IsIntelVideo() method.
+    Make EV-related functions a thread-safe.
+
+11.12.27 --- repository 385 ---
+
+11.12.15 Piv akfl02sb.Piv
+  batchuser.cpp iuser.cpp:
+    If SetApplVers() was not called - root path is used.
+
+11.11.15 Peb at6422dn.Pbb
+  threads.cpp win_msgs.hpp
+    Error messages if the shared memory blocked can't be mapped. Upper bound for interrogation messages.
+
+11.11.10 Pls at6422dn.Pbb
+  batchuser.cpp
+    New paths for log files.
+
+11.12.08 Piv akfx43di.Piv
+  str.cpp:
+     Coding rules violation.
+
+11.11.30 Piv akfx42di.Piv
+  iuser.cpp user.hpp:
+    ProgrCount() is added.
+
+11.11.25 Piv akfx41di.Piv
+  time.cpp time.hpp:
+    IsCorrect() function is added.
+
+11.11.15 Peb aicx16di.Pbb
+  threads.cpp win_msgs.hpp
+    Error messages if the shared memory blocked can't be mapped. Upper bound for interrogation messages.
+
+11.11.10 Pls aicx16di.Pbb
+  batchuser.cpp
+    New paths for log files.
+
+11.11.08 Piv akfx40di.Piv
+  str.cpp str.hpp ustr.cpp:
+    Str::Find() is added.
+
+11.10.12 Piv akfx37di.Piv
+  matrix.hpp:
+    Set() function is added.
+
+11.10.05 Pbb Pls
+  arrays.hpp
+    SetArray() method was added.
+
+11.10.04 --- repository 384 ---
+
+11.09.28 Eed utlx01dn.Eed
+  user.hpp iuser.cpp str.hpp ustr.cpp usage.hh
+    Provide localization for kernel messages.
+
+11.09.09 Piv akfx34di.Piv
+  plugins.cpp:
+    LogMessage if failed to load plugin.
+
+11.09.05 Eed ae3235nn.Eed
+  file.cpp
+    Extend error diagnostic (add error messages reported by system).
+
+11.08.23 Piv akfx34di.Piv
+  str.cpp:
+    is_space() is used instead of comparison with space char in Clip().
+
+11.08.01 --- repository 383 ---
+
+11.06.16 Piv akfx31di.Piv
+  str.cpp ustr.cpp:
+    UStr::GetUniqueName() is corrected and moved to proper file.
+
+11.05.30 --- repository 382 ---
+
+11.05.25 Pbb Peb kccm01di.Pbb
+  compress.cpp compress.hpp base.vcproj
+    New functions (envelope to the ZLIB) were added
+  threads.cpp threads.hpp
+    KCCM task extensions
+
+11.05.19 Peb kcpa02va.Pbb
+  user.hpp iuser.cpp
+    Support of topmost warning message boxes.
+
+11.05.10 Peb kcpa02va.Pbb
+  matrix.hpp
+    Scale function added.
+
+11.04.26 Pls aicf17di.Pbb
+  iuser.cpp user.hpp
+    The GetProgressQuietMode() method was added.
+  win_msgs.hpp
+    KCCM task extensions.
+
+11.04.11 Eed kip206di.Eed
+  str.hpp pathstr.cpp
+    PathStr::Root(), PathStr::IsAbsPath() added.
+
+11.04.05 --- repository 381 ---
+
+11.04.04 Eed repository 381 integration
+  iuser.cpp user.hpp
+    ErrorNoMemory() - interface changed (compatibility with VC 6.0).
+  pathstr.cpp threads.cpp
+    Compatibility with VC 6.0.
+
+11.03.05 Fvg AIIL
+  table.hpp
+    Add new methods 'operator =', Serialization().
+
+11.03.14 Pnd kip202di.Pnd
+  iuser.cpp user.hpp
+    Add SetProgressQuietMode() method.
+
+11.03.05 Piv akfx28di.Piv
+  iuser.cpp:
+    Description is corrected.
+
+11.02.23 Raz kihb02dn.Raz
+  threads.cpp threads.hpp:
+    Path tracing support.
+
+11.01.18 Peb KCVR kcco01di.Pbb
+  threads.hpp threads.cpp
+    The function IntSendMessageCallback() was added.
+
+10.12.16 Peb KCVR kcco01di.Pbb
+  time.hpp time.cpp
+    The method Time::DateStampD() was added.
+
+10.11.27 Pbb KCVR kcco01di.Pbb
+  threads.cpp threads.hpp
+    KCVR task extensions
+    win_msgs.hpp	KCVR task new file.
+
+11.02.21 Piv akfx28di.Piv
+  iuser.cpp user.hpp:
+    ErrorNoMemory - interface is changed.
+
+11.02.01 Eed akfx03dn.Eed
+  str.hpp pathstr.cpp
+    Implement PathStr::GetSIFolder()
+
+11.01.20 Piv akfx27di.Piv
+  iuser.cpp user.hpp:
+    ErrorNoMemory() - size_t is used instead of int.
+
+10.12.09 Piv akfx26di.Piv
+  iuser.cpp:
+    Excess asserts are removed. Break can be set out of progress.
+  str.cpp:
+    Minor cleaning.
+
+10.11.09 Ose akfx10db.Pbb
+  base.hpp
+    Pass arguments to Min() and Max() by reference, not value
+
+10.10.14 --- repository 380 ---
+
+10.10.12 Eed repository 380 integration
+  str.hpp str.cpp
+    Make Str::~Str() not inline (exclude CRT DLL conflicts).
+
+10.09.29 Piv akfx24di.Piv
+  file.cpp file.hpp:
+    GetPos(), SetPos() are added, const modifier added.
+  iuser.cpp user.hpp:
+    SetExit() function is added to provide exit from the program passing
+    multiple progress levels.
+
+10.08.26 Pbb aice05sb.pbb
+  user.hpp iuser.cpp
+    IUser::ReSetBreak() method was added.
+
+10.08.04 --- repository 378 ---
+
+10.06.22 Piv kuao01df.Piv
+  threads.cpp threads.hpp:
+    Rkv codes delivered by Ose in the frames of KUAO.
+
+10.06.02 Piv akfx14di.Piv
+  barrays.hpp file.hpp pathstr.cpp str.hpp time.cpp time.hpp:
+    CTDH corrections. Time::DatTimeSting() is added.
+
+10.05.28 Fvg CTDH  ctdh01di.Fvg
+  str.hpp pathstr.cpp
+    New method SetFileAttr() and new enum FileAttribute.
+
+10.04.02 --- repository 377 ---
+
+10.03.22 Pbb kcls14vn.Pbb
+  memstream.hpp
+    initial size = 64000
+
+10.03.19 Pbb aicf01di.Pbb
+  memstream.cpp
+    Improve memory resizing mechanism
+
+10.03.01 Piv akfx06di.Piv
+  annfile.cpp annfile.hpp:
+    Read for float array is added.
+
+10.03.09 Pnd kcls02dn.Pnd
+  memstream.cpp
+    The caller (MENV) is responsible for freeing ReadMemStream memory block.
+
+10.01.06 Pbb 00204dat.pbb
+  serializer.hpp
+    IO_FLAG_CATIA_DOCUMENT was added
+  time.cpp time.hpp
+   Equality/Inequality operators were added.
+
+09.12.25 --- repository 376 ---
+
+09.12.04 Piv kcav01di.Piv
+  matrix.hpp
+    Type casting is provided.
+  pathstr.cpp str.hpp:
+    PathBaseName() is added.
+
+09.08.06 --- repository 374 ---
+
+09.08.04 Pbb, Pls, Pnd, Rkv, Ose kisg06di.Pbb or later updates, akfh01di.Piv
+  barrays.hpp:
+    KISG changes
+
+09.07.04 Pbb KISG06di.Pbb
+  matrix.hpp
+    Bug in llocateFast() corrected  the ((n * m) / m_n_rows) <= m_n_cols)
+    replaced by (n * m) <= m_n_rows * m_n_cols)
+
+09.05.08 --- repository 373 ---
+
+09.04.20 Piv uifa01di.Piv
+  matrix.hpp time.cpp time.hpp:
+    Ordered during investigation.
+
+09.01.12 --- repository 371 ---
+
+08.12.12 Piv kc4x29di.Piv
+  str.cpp str.hpp:
+    NCmp() NICmp() functions.
+
+08.10.30 --- repository 370 ---
+
+08.10.30 Eed repository 370 integration
+  assert.c base.vcproj
+    Introduce own assert implementation
+
+08.05.26 Rkv 310___02.Pbb
+  annfile.cpp
+    Comments
+  str.cpp str.hpp
+    GetUniqueName()
+
+08.10.13 Pnd 310___02.pbb
+  plugins.cpp
+    Initialization of CM component for Unix.
+
+08.09.18 Pbb at60d8sb.Pbb
+  barray.hpp
+    Bug ZeroAllocate() method was corrected.
+
+08.08.26 Piv kitr01di.Piv
+  batchuser.cpp batchuser.hpp:
+    Ask() now requires Y or N without Carriage return.
+
+08.07.28 --- repository 369 ---
+
+08.07.08 Piv kuhi22vi.Piv
+  base.vcproj batchuser.cpp batchuser.hpp iuser.cpp user.hpp:
+    SwitchLogFileOn() SwitchLogFileOff()
+    These methods of batchuser are put to interface class and IM
+    is provided, where necessary.
+  file.cpp file.hpp:
+    Opened() function is added.
+  str.hpp:
+    Missed bracket.
+
+08.04.28 Fvg kuhi28di.Fvg - kuhi32di.Fvg
+   user.hpp iuser.cpp user.cpp batchuser.hpp batchuser.cpp
+     user class usage in secondary thread, new abstract method Printf().
+
+08.05.30 Piv kc4x20di.Piv
+  pathstr.cpp str.cpp str.hpp:
+    Allocate() is added, descriptions corrected.
+
+08.05.08 --- repository 368 ---
+
+08.04.18 Piv kc4x18di.Piv
+  matrix.hpp:
+    Long string is broken
+  str.hpp pathstr.cpp:
+    SetExtension is provided.
+
+08.03.17 --- repository 367 ---
+
+08.03.14 Eed repository 367 integration
+  plugins.cpp
+    Allow miltiple calls of InitFrameWork()
+
+08.03.07 Piv kc4x15di.Piv
+  matrix.hpp:
+    ResizeBilinear() is made workable. ScaleToHalf() is provided.
+
+08.01.15 --- repository 366 ---
+
+08.01.14 Eed repository 366 integration
+  file.cpp
+    Extend TD for File::Open() about "+" mode.
+    Correct File::Open() for "+b" == "b+".
+    Remove false error message on EOF in File::ReadStr().
+
+07.12.14 Piv ssht02di.Piv
+  annfile.hpp annfile.cpp:
+    ShowInputError() is removed.
+
+07.12.07 Eed  opwt04di.Ose
+  envi.hpp envi.cpp
+    GetMemSize(): add another parameter - amount of total RAM
+
+07.12.04 Fvg kuhi15di.Fvg
+  file.hpp file.cpp str.hpp pathstr.cpp
+    Methods Seek, SeekCur, SeekEnd, FileSize are corrected.
+  matrix3d.hpp
+    New methods Size, Data, operator ==
+
+07.11.21 Fvg kuhi10di.Fvg
+  file.hpp file.cpp
+    New methods Seek64, SeekCur64, SeekEnd64, GetLength, for the process
+    big files.
+
+07.11.08 Rap kuhs02di.Rap
+  annfile.hpp annfile.cpp
+    Addition of function ShowInputError()
+
+07.10.20 Fvg kuhi10di.Fvg
+  matrix3d.hpp
+    New methods Data(), Size().
+
+07.11.15 Pnd ak6404di.Pnd
+  stack.hpp
+    Remove superflouous memory allocation (cause of performance problems).
+  threads.cpp threads.hpp
+    Add interlocked increment feature.
+    Restore no-spin-counts crital sections.
+  thread_time.h thread_time.cxx (new files) base.vcproj
+    Thread profiling feature (for debugging).
+
+07.11.27 --- repository 365 ---
+
+07.11.26 Eed ae3272dn.Eed
+  envi.hpp envi.cpp index.hh
+    GetVMSize() renamed to GetMemSize(), corrected and 3rd argument added.
+  base.vcproj
+    nothrownew.obj added
+
+07.11.07 Pnd ak6403di.Pnd
+  iuser.cpp user.hpp
+    ErrorMessage() and similar functions return FAILURE
+    (for usage convenience).
+    Eliminate usage of TArray in user.hpp header.
+  matrix.hpp matrix3d.hpp
+    Usage of MAX_SIZE_T to fetch 32 bit memory overflow problems.
+  arrays.hpp barray.hpp barrays.hpp matrix.hpp
+    Aditional checks for 32 bit memory overflows.
+  batchuser.cpp
+    Small enhancement closing log file.
+
+07.11.01 Piv ak6401di.Piv
+  matrix.hpp:
+    GetRes() is added.
+
+07.10.26 Pbb Pnd ak6401di.Pnd
+  batchuser.cpp
+    Correct LogMsg() behaviour.
+
+07.10.10  Pbb
+  batchuser.cpp batchuser.hpp
+    BatchUser: LOG file support added for some methods.
+
+07.08.08 --- repository 362 ---
+
+07.07.08 Eed repository 362 integration
+  serializer.cpp
+    change @copydoc to @overload
+
+07.07.13 Piv kc4x10di.Piv
+  serializer.hpp:
+    IO_FLAGS are extended. Probably should be moved to Scene.
+
+07.06.19 --- repository 361 ---
+
+07.06.18 Eed repository 361 integration
+  file.hpp str.cpp
+    Correct Doxygen warnings
+
+07.06.14 Piv kc4x09di.Piv
+  threads.cpp threads.hpp:
+    GetNumberOfProcessors()
+
+07.05.07 --- repository 360 ---
+
+07.04.25 Eed ewlr06di.Eed
+  batchuser.cpp envi.cpp file.cpp guid.cpp mpsync.cpp pathstr.cpp
+  plugins.cpp threads.cpp time.cpp tsync.cpp ustr.cpp
+  export.h barrays.hpp file.hpp garray.hpp matrix.hpp plugins.hpp
+  str.hpp time.hpp plugins.hxx
+    Port to UNIX
+
+07.03.20 Fvg aiim18di.Fvg
+  file.cpp file.hpp str.cpp str.hpp
+    New methods Str::Scanf, IntegerNum, DoubleNum are added.
+
+07.04.04 _kv klrp04vi.Pbb
+  matrix.hpp
+    AllocateFast method was added
+
+07.03.30 Pnd kisu01di.Pnd
+  arrays.hpp
+    Correct bug returning non-const pointer to constant array.
+  matrix.hpp
+    Correct OKAY values.
+    Minor style corrections.
+
+07.03.23 Pbb Pls akfx03db.Pbb
+  threads.cpp threads.hpp
+    SetThreadPriorityAboveNormal(), SetThreadPriorityBelowNormal()
+    and SetNormalThreadPriority() were introduced.
+
+07.02.28 Piv kc4p01di.Piv
+  matrix.hpp:
+    Some new functions are added.
+
+07.02.05 --- repository 359 ---
+
+07.02.05 Eed repository 359 integration
+  base.vcproj time_a.hpp
+    file time_a.hpp removed
+  time.hpp
+    GetTicksNumber() from time_a.hpp was moved here
+
+06.12.25 --- repository 358 ---
+
+06.12.12 Pls Pbb rmce03di.Pbb
+  file.cpp file.hpp
+    Scanf(), SetPos() and GetPos() methods are added.
+
+06.12.13 Piv kc3x22di.Piv
+  arrays.hpp garray.hpp:
+    Constructors from the given values are provided.
+
+06.11.17 --- repository 357 ---
+
+06.11.10 Piv kc3x20di.Piv
+  str.hpp str.cpp:
+    SubStrCmp() const
+
+06.11.09 Eed elqh01dn.Eed
+  str.cpp str.hpp
+    Str::MAX_LENGTH extended till 4096 bytes (1024 was too strong restriction)
+
+06.10.30 Eed
+  index.hh usage.hh
+    Correct TD pages (Guid-related)
+
+06.10.09 Fvg aiin02db.Fvg
+  matrix.hpp
+    Remove method GetRange()
+
+06.10.03 Fvg aiin26di.Fvg
+  matrix.hpp
+    New method ResizeBilinear()
+  table.hpp
+    Correct error in Resize() method.
+
+06.10.02 --- repository 356 ---
+
+06.09.28 Eed ew64
+  envi.cpp iarray.cpp memclass.cpp str.cpp
+  time.cpp envi.hpp iarray.hpp memclass.hpp
+    Changes for compatibility with VS2005 and 64-bit
+
+06.09.28 Piv kc3x17di.Piv
+  iuser.cpp:
+    ShowProgress() should display current progress message, not
+    the top progress message - it is missleading.
+
+06.08.14 Piv
+  annfile.cpp annfile.hpp arrays.cpp arrays.hpp barray.cpp barray.hpp
+  barrays.cpp barrays.hpp base.hpp batchuser.cpp batchuser.hpp
+  bytestream.cpp bytestream.hpp dict.cpp dict.hpp envi.cpp
+  file.cpp file.hpp filestream.cpp filestream.hpp framework.hpp
+  garray.cpp garray.hpp gtable.cpp gtable.hpp iarray.cpp iarray.hpp
+  index.hh iuser.cpp matrix.cpp matrix.hpp matrix3d.cpp matrix3d.hpp
+  memclass.cpp memclass.hpp memstream.cpp memstream.hpp
+  mpsync.cpp mpsync.hpp outfile.cpp outfile.hpp pathstr.cpp
+  plugins.cpp plugins.hpp serializer.cpp serializer.hpp stack.cpp stack.hpp
+  str.cpp str.hpp table.cpp table.hpp threads.cpp threads.hpp
+  time.cpp time.hpp tsync.cpp tsync.hpp usage.hh user.cpp user.hpp ustr.cpp:
+    Integration of klas03vn.Qnv klas04vn.Qnv
+
+06.07.24 --- repository 355 ---
+
+06.07.20 Raz exxx01dn.Raz
+  str.hpp, time_a.hpp
+    Compatibility with WIN64
+
+06.07.21 Piv kc3x14di.Piv
+  iuser.cpp:
+    ShowProgress() - Some protection in the case of improper
+    usage of Init/Term
+   matrix.hpp:
+    int->OKAY
+
+06.07.11 Eed exxx97nn.Eed
+  envi.cpp
+    replace GlobalMemoryStatus() by GlobalMemoryStatusEx().
+
+06.07.04 --- repository 354 ---
+
+06.07.04 Eed repository 354 integration
+  iuser.cpp outfile.cpp str.cpp
+    Protection over string overflow - replace vsprintf() by _vsnprintf()
+
+06.06.16 Pnd rmcx02nn.Pnd
+  iuser.cpp
+    Protection over string overflow.
+  iarray.cpp arrays.hpp memclass.hpp
+    Clearing memory statistics.
+
+06.06.16 Eed ae3210sb.Eed
+  pathstr.cpp
+    PathStr::Exec() - correct for case with spaces in executable name
+
+06.06.15 Piv kc2x05di.Piv
+  pathstr.cpp:
+    Exec() - returns FAILURE in all cases if spawnvp fails.
+
+06.06.05 Eed Repository 353 integration
+  plugins.cpp
+    Add call of _set_error_mode() into InitFrameWork()
+
+06.06.07 Piv kc2x04di.Piv
+  user.hpp iuser.cpp:
+    ClearStatusMessage() is added.
+
+06.06.05 Eed kc2x03di.Piv
+  str.hpp user.hpp iuser.cpp pathstr.cpp
+    Move GetRootPath() from IUser to PathStr
+    Remove IUser::SetRootFolder()
+
+06.06.05 Piv kc3x12di.Piv kc2x03di.Piv
+  file.cpp file.hpp:
+    InFile is provided by possibility to specify comments separator.
+
+06.06.05 Eed ae3201db.Eed
+  dict.hpp
+    operator [] - return reference instead of value (ae3203nb.Ose)
+
+06.06.05 Pbb Pls rmcu05di.Pbb
+  batchuser.cpp
+    fflush() added.
+
+06.03.21 Eed ae3227nn.Eed
+  tsync.cpp
+    Correct errors discovered by MSVC++ 2005 and Intel C++ Compiler 9.0
+
+06.03.21 Piv kc3u12di.Piv kc3x04di.Piv
+  base.vcproj:
+    3 GB option.
+
+06.01.23 Pnd aklx01si.Pnd
+  iuser.cpp user.hpp arrays.hpp
+    Intelligent progress indication.
+
+05.12.12 Pbb Pls kibd06di.Pbb kc3x02di.Piv
+  envi.cpp threads.cpp threads.hpp index.hh
+    comments correction.
+
+05.12.12 Pbb Pls kibd05di.Pbb kc3x02di.Piv
+  envi.cpp envi.hpp threads.cpp threads.hpp
+    KIBD final changes.
+
+05.12.12 Pic akf5e3sb.Piv kc3x02di.Piv
+  file.cpp file.hpp:
+    File::CopyWithDir() is implemented.
+
+05.12.12 Pbb Pls KIBD01di.pbb kc3x02di.Piv
+  envi.cpp envi.hpp threads.cpp threads.hpp
+    KIBD task corrections
+
+05.12.12 Pls Pbb kc2a01di.pls kc3x02di.Piv
+  index.hh  guid.hpp guid.ppp base.vcproj
+    Class Guid is added (KC2A task).
+
+05.12.12 Eed klxx03dn.Eed
+  user.hpp iuser.cpp batchuser.hpp batchuser.cpp
+    Progress indication counting moved to base IUser class.
+    User break is reset only by outer Init/TermProgr().
+    Indication of subprogresses is automatically scaled
+    into corresponding subregion of outer progress.
+    Simplify progress-related methods.
+
+05.12.12 Eed Repository 349 integration
+  export.h barrays.hpp str.hpp
+  envi.cpp file.cpp pathstr.cpp threads.cpp time.cpp ustr.cpp
+    Corrections for Linux
+
+05.11.11 Eed Repository 348 integration
+  serializer.hpp matrix3d.hpp matrix.hpp
+    correct Doxygen warnings
+
+05.11.11 Piv kc3u01di.Piv kc3u06di.Piv
+  batchuser.cpp batchuser.hpp iuser.cpp user.hpp
+    Information() dialog is provided.
+
+05.10.12 Eed klbc01dn.Eed
+  pathstr.cpp
+    Make MkTempDir() thread-, process- and host-safe.
+
+05.08.24 Eed Repository 345 integration
+  barrays.hpp
+    Remove <T> from SArray constructors declaration.
+
+05.05.26 Fvg aicx09si.Piv
+  serializer.hpp, serializer.cpp:
+    io_flags member instead distributive; new methods
+    IsAccelDataStoring(), SetAccelDataStoring(); methods IsDistributive() and
+    SetDistributive() and Constructor are corrected.
+
+05.05.26 Enk akfv07di.Enk aicx09si.Piv
+  iuser.cpp:
+    Remote stereo support update (AKFV)
+
+05.05.03 Eed Repository 340 integration
+  pathstr.cpp
+    Add CorrectPahtSeparator() at the end of constructor
+  user.hpp iuser.cpp
+    Make Debug() method available in all DLL configurations
+
+05.05.03 Piv aicx08si.Piv
+  base.vcproj
+   Project name is edited
+
+05.04.07 Eed Repository 339 integration
+  str.hpp pathstr.cpp
+    PathStr::Remove() added
+
+05.04.06 Pnd akli02va.Pnd akli02di.Pnd
+  user.hpp
+    Move Tr() method declaration to provide binary compatibility
+    with previous versions.
+
+05.04.06 Eed AICx Repository 339 integration
+  str.hpp pathstr.cpp
+    Extend PathStr::Run() by console mode parameter
+
+05.03.17 Fvg aklx06db.Fvg
+  str.hpp str.cpp
+    New method Str::Clip()
+
+05.01.28 Eed Repository 336 integration
+  stack.hpp dict.hpp barray.hpp
+    Remove default parameters initialization from methods definition:
+    VC 6.0 does not accept it.
+  envi.cpp envi.hpp
+    AlignedMalloc() and AlignedFree() methods added
+
+05.01.19 Eed klas07di.Eed
+  index.hh
+    Convert @mainpage to @page
+
+05.01.17 Pls klrp03di.pls
+  time_a.hpp
+    Provides fine timing functions useful for testing.
+
+05.01.12 Eed Repository 335 integration
+  dict.hpp str.hpp pathstr.cpp file.cpp batchuser.cpp ustr.cpp
+    Correct Doxygen warnings
+
+04.12.24 Eed Repository 334 integration
+  plugins.cpp plugins.hxx plugins.hpp
+    DLL version control added
+    specific path substitution for to-be-loaded DLL removed
+  iuser.cpp
+    superfluous Assert for not-BIN(D) folder removed
+  framework.hpp
+    main application specific stuff separated into this header
+
+04.12.20 Piv klas10di.Piv
+  annfile.cpp annfile.hpp file.cpp file.hpp:
+    Enum and struct names of SDK to Mixed case.
+
+04.12.14 Eed KLAS
+  arrays.(hpp,cpp) barray.(hpp,cpp) barrays.(hpp,cpp) dict.(hpp,cpp)
+  garray.(hpp,cpp) gtable.(hpp,cpp) matrix.(hpp,cpp) matrix3d.(hpp,cpp)
+  stack.(hpp,cpp) table.(hpp,cpp) user.hpp
+    Move template class descriptions from HPP to newly created CPP files.
+
+04.11.30 Pnd klas08di.Pnd
+  usage.hh index.xx arrays.hpp matrix.hpp barray.hpp matrix3d.hpp index.hh:
+    Corrections to provide unique tag names
+  dict.hpp gtable.hpp memclass.hpp user.hpp
+    Minor corrections (spacing) integrating klas01di.Eed.
+  base.vcproj
+    Remove base/simd.hpp from the project.
+
+04.11.26 Eed klas01di.eed
+  All source files were changed.
+  All html files were removed.
+    According to klas02ds.Pnd.
+
+04.11.01 Pnd klxx01dn.pnd
+  annfile.hpp base.hpp batchuser.hpp envi.hpp export.h file.hpp filestream.hpp
+  iarray.hpp memclass.hpp memstream.hpp mpsync.hpp outfile.hpp plug_gen_desc.hh
+  plugins.hpp plugins.hxx serializer.hpp str.hpp time.hpp tsync.hpp user.hpp
+  base.vcproj
+    Rename export.hxx to export.h
+
+04.10.29 Eed klxx02dn.eed, 40801dat.eed
+  user.hpp, batchuser.cpp, user.htm, iuser.cpp
+  iuser.cpp (renamed from user.cpp),
+  user.cpp (new file)
+    Change behavior of default User object;
+    add SetUser() and remove GetUser() global functions.
+  str.hpp, str.cpp, ustr.cpp, pathstr.cpp, str.htm, ustr.htm, pathstr.htm
+    Add smooth processing of NULL strings in all Str/UStr/PathStr methods.
+  user.hpp, user.cpp, user.htm
+    Add Debug() global function (exxx28nn.Pnd)
+  str.hpp, pathstr.cpp, pathstr.htm
+    GetExecutablePathByHandle() method added.
+  plugins.hpp, plugins.cpp
+    Plugin loading moved from SYSTEM to BASE
+  a lot of header files
+    INTAPI_BASE macro inserted to exported methods
+  dict.hpp, tdict.htm
+    New method TDict::Exclude() added
+
+04.10.29 Pnd klxx02dn.eed
+  str.*
+    Add Catf() method
+
+04.10.06 Enk, Eed - klas02va.eed
+  envi.hpp envi.cpp envi_gen_desc.hh envi_gen_desc.xx
+    getenv/putenv functionality added
+
+04.10.06 Pnd klas01di.Pnd
+  envi.cpp memclass.cpp base.htm base.hpp barrays.hpp
+    Min/Max functions were moved here from MATH.
+    Corrections due to new repository structure.
+
+04.07.19 Pnd AE32
+  elml_not_port.cpp threads.hpp
+    Functionality of envi/non_port was moved here.
+
+04.06.25 Fvg, aiif76db.Fvg aiifd3sb.ovn
+  ustr.cpp str.hpp
+    method Encode(), new parameter
+
+04.05.28 Piv 40602dat.piv
+  file.cpp:
+    InFile::Read() - check  if (_isnan(val) || !_finite(val))
+    is added.
+
+04.05.27 Pbb AT59 40602dat.pbb
+  matrix.hpp, matrix3d.hpp
+  MAX_UINT  replaced by MAX_INT
+
+04.05.21 Eed
+  str.hpp, pathstr.cpp, pathstr.htm
+    PathStr::Clean() method added
+
+04.05.12 Ose AT58 at5802db.Ose
+  matrix.hpp, matrix3d.hpp
+    Incorrect matrix allocation for large data
+
+04.05.12 Odz AT58 at5801db.Odz
+  matrix.hpp
+    Incorrect matrix allocation for large data
+
+04.05.06 Pls Pbb akfs06di.pbb
+  serializer.cpp serializer.hpp
+    distributive switch was added
+
+04.04.05 Pnd AT58 Memory statistics
+  envi.hpp, envi.cpp
+    New files
+
+04.04.02 Eed AT58  Memory statistics for TArray and TBArray
+  added new files:
+    iarray.hpp, iarray.cpp
+    memclass.hpp, memclass.cpp
+  changed files:
+    arrays.hpp, barray.hpp
+
+04.03.24 Pbb,
+  barray.hpp
+  default block size corrected according Pnd suggestion.
+
+04.03.16 MOD,
+  barray.hpp
+    added ZeroAllocate function
+
+04.03.16 _ak CD2T
+  str.hpp, str.htm
+    Find(..) method modified allowing to search from specific position
+
+04.03.15  Eed
+  ustr.hpp, ustr.cpp, ustr.htm
+    UStr::Encode() added
+
+04.03.01 Udv
+  filestream.cpp
+  Bug correction (aiif33nb._dv)
+
+04.02.18 _sr, _sk UTLx
+  file.cpp user.cpp
+    UI constants were replaced by the natural strings inside of Tr()
+  res.h
+    Removed
+
+04.02.03 Eed
+  ustr.cpp user.cpp user.hpp user.htm
+    IUser::Tr() method added (internationalization)
+
+03.12.31 Ose
+  tsync.hpp, tsync.cpp
+  Method TSync::TryMono() is added; assignment operator whcih is
+  impossible for TSync is provided as private to prevent its usage;
+  copy constructor is also made private for the same reason
+  (yet IMO IT WOULD BE BETTER TO write them as "empty" methods)
+  tsync.htm: description of these changes added and also minor misprints
+  of previous version of this doc were corrected
+
+  matrix.hpp:   short annotation to SwapMatrix()
+  matrix3d.hpp: SwapMatrix() added identically to 2D matrix
+
+03.12.15 Eed
+  file.cpp - bug correction ae3203sb.Eed
+
+03.10.27 Oek
+  barray.hpp
+  File is restored from at5803dn.Mip (at5817dn.Mvr)
+
+03.10.21 Eed
+  pathstr.cpp - bug correction klbc07sb.Eed
+
+03.09.23 Oek bdgt77nn.Oek
+  barray.hpp:
+  Bug correction.
+
+03.09.19 Piv 30911dat.Piv
+  time.cpp, time.hpp:
+  SetFromSekisuiString() is added
+
+03.09.11 Pnd
+  str.hpp me.cpp me.hpp me.htm user.cpp user.hpp file.hpp str.cpp
+    Make Str class more consistence. Add some const specifiers
+
+03.08.01 Piv 30801dat.Piv
+  arrays.hpp:
+  Permute() function is added
+
+03.07.20 Fvg (AIIF)
+  matrix.hpp
+    Methods RemoveColumns(), RemoveRows() are updated
+
+03.07.15 Pnd (KLON)
+  me.hpp me.cpp
+    Updates due to new PlugType constructor
+
+03.07.10 FLOW AIIF
+  matrix.hpp
+   Methods RemoveRows(), RemoveColumns() are added
+
+03.06.27 Pbb, Pls
+  file.hpp file.cpp added InFile::Read() methods for int, float and double
+  values in brackets.
+  \0, as end of line ckecking in CurLineEnded() and   SkipSeparators()
+  str.cpp str.hpp - Str::CheckAndConvert2Real() added.
+
+03.06.10 Pnd KLON
+  serializer.*
+    Serialization of bool type was added.
+
+03.05.25 Ose KLBM
+  NEW MODULES: matrix3d.hpp, barrays.hpp -
+  3D matrix and slice array  were added
+
+  matrix.hpp - 2D matrix now returns its row also as protected link array
+  base.vcproj - new modules are added to project
+
+03.05.16 Pnd AE32
+  serializer.cpp
+    Set data version to zero (unknown) for import stream.
+
+03.04.23 Mip
+  barray.hpp - corrections of array operations
+
+03.04.21 Mip
+  barray.hpp - access to block's data
+
+03.04.15 Fgk
+  user.hpp, user.cpp, serializer.hpp, serializer.cpp
+    Processing of the application version
+
+03.04.03 Pnd
+  serializer.cpp serializer.hpp:
+    Smooth recovery of IL 1.72 files
+    Add method CheckValueType() to serializers
+
+03.03.27 Pnd
+  me.hpp, memstream.hpp, filestream.hpp, batchuser.hpp,
+  user.cpp, memstream.htm, filestream.htm, batchuser.cpp:
+    Remove "VIRTUAL"
+
+03.03.27 Pnd
+  str.hpp, pathstr.cpp, pathstr.htm:
+    add const specifiers to parameters of UseDefaults()
+
+03.03.25 Piv 30308dat.Piv
+  str.hpp, pathstr.cpp, pathstr.htm:
+    FinfFile() is implemented
+
+03.03.24 _pp, UIMU
+  user.hpp, user.cpp
+  Methods Log(), LogD(), LogMsg(), AskOK(), AskOKCancel(),
+    AskOkCANCEL(), AskYESNo(), AskYesNO(), Ask()
+    are added to IUser class.
+  Update user.htm
+  batchuser.hpp, batchuser.cpp
+  Methods LogMsg(), Ask() are added to BatchUser class.
+  Update batchuser.htm
+
+03.03.04 Pnd (KLOM)
+  Move KLOM (plugs) related files to base/system
+
+03.01.31 Eed
+  arrays.hpp - add TArray::operator=
+
+02.12.17 Pnd
+  Global changes - KLOM pre-integration
+
+02.12.04 Pnd
+  New:
+    plugref.hpp global.cpp reflist.hpp plug.hpp ref.hpp notify.hpp
+    plug.cpp framework.hpp refengine.h pluglist.hpp
+  Edited:
+    me.*, multiple files using User interface
+  KLOM integration.  Plugs moved from system to base.
+
+02.09.23 Pbb
+  file.cpp, file.htm - Assert, that mode must be MODE_TEXT removed
+  from ReadStr methods.
+
+02.09.07 Fvg
+  str.hpp, pathstr.cpp - new method PathStr::Rename()
+
+02.07.11 Eed
+  pathstr.cpp - bug in ListFileName() correction (klbc06sb.Eed)
+
+02.06.25 Pnd
+  me.* tsync.* - added
+  memstream.* - updated
+  ELMG (GLOBAL_PARALLEL) IM was added.
+
+02.06.22 Piv
+  user.cpp
+  Progress can be called when it is already active
+
+02.04.17 Oek
+  dict.hpp, tdict.htm
+  Dictionary elements are protected (for MDict purpose), RMAS
+  Accommodate() method is added, RMAS
+
+02.04.06 Fvg, Pnd
+  str.hpp, str.cpp, pathstr.cpp
+  Fvg: new methods Str::Replace(), PathStr::CorrectPathSeparator()
+  Pnd (integration): remove Replace(), some corrections of
+  CorrectPathSeparator(), update pathstr.htm.
+
+02.01.28 Pnd
+  memstream.* (new)
+  MemStream classes added
+
+02.01.28 Pnd
+  file.*, filestream.cpp, res.h
+  Add possibility of direct end user error notification
+  for File and stream classes
+
+02.01.28 Pnd
+  bytestream.*, memstream.*
+  Method EndOfFile() renamed by EndOfStream()
+
+02.01.28 Pnd
+  user.*
+  InternalError() method added
+
+02.01.25 Pnd
+  user.*, batchuser.*
+  Deafault implementation of GetDataPath() at the level of base User class.
+  Move common User functonality to the base class.
+
+02.01.12 Pnd
+  user.hpp, user.htm, user.cpp (added), res.h (added)
+  Add User::ErrorNoMemory() method
+
+02.01.11 Pnd
+  str.hpp, pathstr.* - methods Path(), BaseName(), FileName(), Extension()
+  return PathStr, not UStr
+
+02.01.10 Pnd
+  treads.hpp - added (ELML proto)
+
+02.01.10 Oek
+  matrix.hpp - operator const T *() const is added, RATC '2.01.10 :Oek
+
+02.01.03 Pnd
+  array.hpp, tarray.htm:
+  Replace "operator ==(T)" by Set(T) for safity
+
+01.12.22 Ose
+  new classes: OutFile, AnnFile
+  file.cpp, file.hpp, file.htm - corrected
+  annfile.cpp, annfile.hpp, annfile.htm - added
+  outfile.cpp, outfile.hpp, outfile.htm - added
+
+01.12.18 Pbb
+  matrix.hpp - serialization added
+
+01.11.22 Oek
+  gtable.hpp: Definition of GTable<T> class (AT57, Oek)
+
+01.11.21 Fgk
+  ttable.htm - correction of method descriptions (KLBC12db.Fgk)
+
+01.11.08 Pnd
+  bytestream.*, filestream.* - replace CheckEOF() method by EndOfFile() one
+
+01.10.17 Pnd
+  str.hpp, pathstr.cpp - PathStr::AddPath() method added
+
+01.10.17 Pnd
+  dict.* - Key(), Value() methods added
+
+01.05.20 Rkd
+  str.cpp, str.hpp - added RemoveBlanks() method, changed algorithm of Str
+  comparison (now it will not crash on Assert if Str is NULL)
+
+01.04.26 Eed
+  garray.hpp - "const" added to the end of operator==() (ae3106dn.Oek)
+
+01.04.25 Pnd
+  garray.htm (new), tarray.htm, garray.hpp (new), arrays.hpp
+  AE31 - introduction of GArray class caused by SGI portability problems
+
+01.04.25 Eed
+  arrays.hpp: TArray<T>::Insert(), bug in ASSERT corrected (klbc04sb.Eed)
+
+01.04.24 Eed
+  tarray.htm: Requirement about "==" operator for type T
+              was aded due to  portablility problems (SGI compiler)
+
+01.04.04 Fgk
+  matrix.hpp: change min() by Min()
+
+01.04.03 Fvg, Fgk
+  table.hpp
+  1. usage of KLBC_TECT constant instead DEBUG for methods Output()
+  2. Conctructor TTable(int n)
+
+01.03.26 Fgk
+  table.hpp:
+  new method Output(File &out) is added for _DEBUG
+
+  *.htm:
+  correction of references to *.hpp files
+
+01.03.26  Fvg
+  str.hpp, pathstr.cpp: extension of PathStr class, klbc17nn.Eed
+    CurDir(), ChDir(), MkDir(), RmDir(),
+    GetExecutablePath(), Run(), Exec()
+
+01.03.25 Fgk
+  file.hpp
+  methods show() are INLINE (conflict in the tests)
+
+01.03.20  Fvg
+  pathstr.cpp: correct bug pointed in klbc01cb.Eed, klbc03cb.Eed
+
+01.03.19  Pnd
+  matrix.hpp
+  IDP/OOO corrections
+
+01.03.13  Pnd
+  marray.*:
+  MArray class is moved to math library
+
+01.03.02  Pnd
+  marray.hpp:
+  Add SelectRnd method
+
+01.03.02  Pnd
+  matrix.hpp:
+  Usage of TArray, simplification
+
+01.03.02  Pnd
+  matrix.hpp, tmatrix.htm
+  New files added (after Ose).
+
+01.02.22  Eed
+  pathstr.cpp - bug correction (klbc04nb.Pnd)
+
+01.02.19  Pnd
+  array.hpp, str.hpp, pathstr.cpp:
+  Separation of TArray and MArray.
+  PATH_SEPARATOR constants declared as consts.
+
+01.01.31  Pnd
+  batchuser.*:
+  BatchUser class added
+
+01.01.29  Pnd
+  serializer.hpp/cpp/htm files added (moved here from system folder).
+
+01.01.22  Fvg
+  table.hpp: new file was added
+  ttable.htm: new file was added
+  index.htm: changed (TTable class added)
+
+01.01.18  Pbb
+  stack.hpp, stack.htm, wstack.htm, index.htm:
+  Stack => TStack changes.
+
+01.01.15  Ose
+  arrays.hpp - SwapArrays(), BinarySearch() methods added
+
+01.01.15  Pnd
+  Add Serialization methods to Time, Str, Ustr, PathStr classes.
+  Add PATH_SEPARATOR and PATH_SEPARATOR_STR to PathStr class.
+  Describe Str::MAX_LENGTH constant.
+  Add PathStr::UseDefaults() method.
+  Allow zero size for File::Read and File::Write (bug?).
+  Assignment operators (=, +=) were added to UStr class.
+  str argumeant of Str::SubStrCmp) is declared as const.
+  Moving TDict class definition to a separate file dict.hpp.
+  UStr(int) constructor declared as explicit.
+  TArray(int) constructor declared as explicit.
+  "[] const" operator returns "const T &" instead of T
+  Default array block size is changed from 1 to 10.
+  Add TArray::Grow() method.
+  Add serialization methods to TArray.
+  Files bytestream.hpp, filestream.hpp, filestream.cpp added.
+  File user.hpp added.
+
+00.12.04  Oek
+  stack.hpp: new file was added
+  stack.htm, wstack.htm: new files added
+  index.htm: changed (Stack class added)
+
+00.10.25  Piv
+   file.hpp, file.cpp: InFile::SkipTextIgnCase() is added.
+
+00.10.24  Eed
+  str.hpp
+  pathstr.cpp
+  pathstr.htm
+    method Path() changed (klbc01sb.Eed)
+
+Revision 1.3  2000/09/14 09:29:50  envi
+ttree.hpp removed
+
+00.09.14  Eed
+  ttree.hpp removed
+
+Revision 1.2  2000/08/31 08:14:15  envi
+Seek() added
+
+
+00.08.30  Fvg
+   file.hpp:
+
+Revision 1.1  2000/08/11 05:48:18  envi
+New updates
+
+
+00.03.25  Evg
+  ttree.hpp: UTWS, preparation for release
+
+00.03.24  Rkd
+  integration (akf301dn.Rkd)
+
+99.11.02  Pnd
+  Latest changes added

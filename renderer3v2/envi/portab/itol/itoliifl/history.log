@@ -1,0 +1,34 @@
+07.08.08 --- repository 362 ---
+
+07.07.01 Odz at6010db.Odz
+  itoliifl.c
+    Number of traced rays are stored as 5-th observer layer
+
+06.07.04 --- repository 354 ---
+
+06.06.29 Odz OMAO omao07di.Odz
+  itoliifl.c
+    New type of IIFF file formats
+
+06.05.21 Odz OMAO omao01di.Odz
+  itoliifl.c
+    New type of IIFF file formats
+
+01.04.13  Fgk
+  itoliifl.c: Bug correction, AT5628db.Fgk
+    free() is changed by RTL_free() 
+    global variables ifl_vars and ifl_files are extended 
+    as in itbtiifl.c
+  
+Revision 1.1.1.1  1998/07/29 12:43:57  envi
+Import ENVI to repository
+
+Revision 1.2  1994/05/10 12:49:25  cvs
+
+
+itoliifl.mak:
+  DOS makefile made really DOS
+
+Revision 1.1  94/04/19  14:03:44  cvs
+history.log started
+

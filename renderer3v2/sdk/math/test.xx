@@ -1,0 +1,34 @@
+/// @file
+///
+/// @brief "Test design" page.
+///
+/// @author Fvg - Vjacheslav Glukhov, KLAS, '04.11.08
+///
+/// Copyright &copy; INTEGRA, Inc., 2004.
+
+//////////////////////////////////////////////////////////////////////////////
+/**
+
+@page math_tests Test design
+
+The following tests were developed (location: tests/math/test):
+- testing of the basic mathematical functions (test0.cpp); 
+- testing of operations with 3D vectors (test1.cpp, test2_1.cpp, test4.cpp);
+- testing of operations with 2D vectors (test1_0.cpp, test2_2.cpp);
+- testing of operations with 2x2 matrices and 2D vectors (test3_1.cpp);
+- testing of operations with 3x3 matrices and 3D vectors (test3_2.cpp);
+- testing of operations with 3x3 rotation matrices (test3_2a.cpp);
+- testing of operations with 4x3 matrices and 3D vectors (test3_3.cpp);
+- testing of sorting array and binary search (MArray class) (test7.cpp);
+- testing of dictionary (MDict class) (test8.cpp);
+- testing of bounding sphere (BSphere3 class) (test_bsphere3.cpp);
+- testing of CRC code calculation (CRC class) (test_crc.cpp);
+- testing of polar coordinates usage (test_polar.cpp);
+- testing of spline usage (Spline class) (test_spline.cpp).
+- testing of Halton quasi generator (test_halton.cpp).
+
+The all tests processed by the simple console application. After test 
+compilation the test.bat should be called which prints SUCCESS/FAILURE as the 
+result. 
+
+**/

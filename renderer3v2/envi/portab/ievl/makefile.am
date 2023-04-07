@@ -1,0 +1,5 @@
+lib_LIBRARIES = libievl.a
+
+libievl_a_CPPFLAGS = -I$(top_srcdir)/envi/include
+libievl_a_SOURCES = ievl.c
+

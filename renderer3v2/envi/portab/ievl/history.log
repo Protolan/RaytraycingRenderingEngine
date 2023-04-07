@@ -1,0 +1,33 @@
+08.10.30 --- repository 370 ---
+
+08.10.20 Eed repository 370 integration
+  ievl.c
+    Remove unnecessary assertions
+
+Revision 1.1.1.1  1998/07/29 12:43:35  envi
+Import ENVI to repository
+
+Revision 1.3  1997/09/21 12:39:20  envi
+ENVI 2.88
+
+# Revision 1.2  1997/07/05  10:38:47  envi
+# ENVI 2.87 update
+#
+
+ievl.c:
+  LF character is removing from string which is extracted by 
+  ev_getenv() from env-file
+  (Esg 97.08.15)
+
+makefile.imf:
+  Corrected clean target. ikbl$(O) target renamed to ievl$(O) 
+  (Ujs 97.07.03)
+
+# Revision 1.1  1996/03/15  08:35:03  ENVI
+# Envi 2.75
+#
+
+ievl.c, makefile.imf:
+  Initial revision.
+
+# end of history.log

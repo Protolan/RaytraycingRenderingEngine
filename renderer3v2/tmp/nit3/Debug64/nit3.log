@@ -1,0 +1,6 @@
+﻿  writenit.cpp
+C:\Users\alang\Desktop\renderer3v2\embree-3.8.0.x64.vc14.windows\include\embree3\rtcore_common.h(237,1): warning C4324: RTCPointQuery: структура была дополнена нулями из-за описателя выравнивания
+C:\Users\alang\Desktop\renderer3v2\embree-3.8.0.x64.vc14.windows\include\embree3\rtcore_common.h(286,1): warning C4324: RTCPointQueryContext: структура была дополнена нулями из-за описателя выравнивания
+C:\Users\alang\Desktop\renderer3v2\embree-3.8.0.x64.vc14.windows\include\embree3\rtcore_common.h(325,1): warning C4324: RTCPointQueryFunctionArguments: структура была дополнена нулями из-за описателя выравнивания
+C:\Users\alang\Desktop\renderer3v2\nit3\writenit.cpp(19,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  nit3.vcxproj -> C:\Users\alang\Desktop\renderer3v2\bind64\nit3.exe

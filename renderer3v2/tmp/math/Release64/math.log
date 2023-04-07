@@ -1,0 +1,18 @@
+﻿  bsphere3.cpp
+  complex.cpp
+  coordsys.cpp
+  math.cpp
+  matrix2.cpp
+  matrix3.cpp
+  matrix4.cpp
+  matrix43.cpp
+  nrnd.cpp
+  phys_const.cpp
+  quatern.cpp
+  rnd.cpp
+  sunloc.cpp
+  vect2.cpp
+  vect3.cpp
+  vect4.cpp
+  Создание кода...
+  math.vcxproj -> C:\Users\alang\Desktop\renderer3v2\lib64\math.lib

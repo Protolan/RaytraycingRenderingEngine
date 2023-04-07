@@ -1,0 +1,27 @@
+08.10.30 --- repository 370 ---
+
+08.10.20 Eed repository 370 integration
+  plugin.cpp
+    Add protection check inside DllMain()
+
+07.11.27 --- repository 365 ---
+
+07.11.27 Eed repository 365 integration
+  plugin.cpp
+    Remove global new operator (in favour if nothrownew.obj).
+
+07.11.07 Pnd ak6403di.Pnd
+  plugin.cpp
+    Add global new operator functions to return zero on lack of memory
+    (instead of raising an exception).
+
+06.03.21 Eed ae3227nn.Eed
+  plugin.vcproj
+    Remove separate makefile
+
+04.12.24 Eed Repository 334 integration
+  plugin.cpp
+    DLL version control added
+
+04.10.29 Eed klxx02dn.eed
+  new folder created

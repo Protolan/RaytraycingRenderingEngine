@@ -1,0 +1,15 @@
+lib_LIBRARIES = libicol.a
+
+libicol_a_CPPFLAGS = -I$(top_srcdir)/envi/include
+libicol_a_SOURCES = \
+	co_light.c \
+	col_obj.c \
+	icol.c \
+	icol_fb.c \
+	icol_ini.c \
+	lcd_cre.c \
+	lcd_xyz.c \
+	rgb_clip.c \
+	algebra.h \
+	icol_own.h
+
